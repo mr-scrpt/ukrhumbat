@@ -1,0 +1,22 @@
+.close {
+  &__inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_primary;
+  }
+
+  &__icon {
+    width: 25px;
+    height: 16px;
+    // background-color: #fff;
+    @include ts(background-color);
+  }
+}
+.close:hover {
+  .close__icon {
+    background-color: $color_secondary;
+  }
+}

@@ -1,0 +1,47 @@
+{% extends 'kit/layout/kit-cell-layout.njk' %}
+{% block cell %}
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">Width available</div>
+        </div>
+        <div class="kit__class">input_width_available</div>
+        <div class="kit__current">
+            <section class="breadcrumbs">
+                <div class="breadcrumbs__inner"
+                     itemscope=""
+                     itemtype="http://schema.org/BreadcrumbList">
+                    <nav class="breadcrumbs__list" aria-label="breadcrumb">
+                        <div class="breadcrumbs__item"
+                             itemscope=""
+                             itemprop="itemListElement"
+                             itemtype="http://schema.org/ListItem">
+                            <a href="/" class="breadcrumbs__link link" itemprop="item">
+                                <span class="breadcrumbs__title" itemprop="name">Main</span>
+                            </a>
+                        </div>
+                        <div class="breadcrumbs__item"
+                             itemscope=""
+                             itemprop="itemListElement"
+                             itemtype="http://schema.org/ListItem">
+                            <a href="pod-sistemyi-odnorazovyie/"
+                               class="breadcrumbs__link link"
+                               itemprop="item">
+                                <span class="breadcrumbs__title" itemprop="name">Level first</span>
+                            </a>
+                        </div>
+                        <div class="breadcrumbs__item"
+                             itemscope=""
+                             itemprop="itemListElement"
+                             itemtype="http://schema.org/ListItem">
+                            <span href="pod-sistemyi-odnorazovyie/elf-bar-1500-coconut-melon"
+                                  class="breadcrumbs__link breadcrumbs__link_active"
+                                  itemprop="item">
+                                <span class="breadcrumbs__title" itemprop="name">Level last</span>
+                            </span>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock cell %}

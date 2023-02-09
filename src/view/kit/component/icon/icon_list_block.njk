@@ -1,0 +1,47 @@
+{% extends 'kit/layout/kit-cell-layout.njk' %}
+{% block cell %}
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">Icon arrow in block</div>
+        </div>
+        <div class="kit__class">arrow</div>
+        <div class="kit__current">
+            <div class="arrow">
+                <div class="arrow__inner">
+                    <div class="arrow__item kit-pagination__arrow_prev">
+                        <div class="arrow__icon icon icon_arrow icon_arrow_r_180"></div>
+                    </div>
+                    <div class="arrow__item kit-pagination__arrow_next">
+                        <div class="arrow__icon icon icon_arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">Icon burger in block</div>
+        </div>
+        <div class="kit__class">burger</div>
+        <div class="kit__current">
+            <div class="burger kit__burger">
+                <div class="burger__inner">
+                    <div class="icon icon_burger burger__icon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">Icon close panel in block</div>
+        </div>
+        <div class="kit__class">close</div>
+        <div class="kit__current">
+            <div class="close kit__close">
+                <div class="close__inner">
+                    <div class="icon icon_cross close__icon"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock cell %}

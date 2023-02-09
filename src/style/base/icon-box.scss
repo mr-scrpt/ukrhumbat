@@ -1,0 +1,23 @@
+.icon-box {
+  position: relative;
+  &__item {
+    position: absolute;
+    @include ts(opacity);
+    &:nth-child(1) {
+      opacity: 1;
+      @include ts(opacity);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      @include ts(opacity);
+    }
+  }
+}
+.icon-box:hover {
+  .icon-box__item:nth-child(1) {
+    opacity: 0;
+  }
+  .icon-box__item:nth-child(2) {
+    opacity: 1;
+  }
+}

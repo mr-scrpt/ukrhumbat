@@ -36,19 +36,6 @@ $kit_color_gray: rgba(193, 200, 199, 0.55);
 
     border-left: 2px solid $kit_color_gray;
   }
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-  }
-  &__icon-big {
-    width: 40px;
-    height: 40px;
-  }
-  &__icon-biggest {
-    width: 100px;
-    height: 100px;
-  }
   // &__list-item {
   //   width: 160px;
   //   height: 160px;
@@ -163,18 +150,8 @@ $kit_color_gray: rgba(193, 200, 199, 0.55);
   }
   &__current {
     padding: 15px;
-    margin-bottom: 10px;
     &_dark {
       background-color: $kit_color_dark;
     }
-  }
-
-  &__burger {
-    width: 40px;
-    height: 40px;
-  }
-  &__close {
-    width: 40px;
-    height: 40px;
   }
 }

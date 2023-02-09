@@ -1,0 +1,42 @@
+.pagination {
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    font-weight: 400;
+
+    color: $color_dark;
+    @include ts(color, background-color);
+    &_active {
+      background-color: $color_primary;
+      color: $color_light;
+    }
+
+    &:hover {
+      background-color: $color_primary;
+      color: #fff;
+      & .pagination__icon {
+        background-color: $color_light;
+      }
+    }
+  }
+
+  &__icon {
+    width: 11px;
+    height: 16px;
+    @include ts(background-color);
+  }
+}

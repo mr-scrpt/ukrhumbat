@@ -1,7 +1,7 @@
 .icon {
   display: inline-block;
 
-  min-width: 1em;
+  min-width: 0.5em;
   margin: 0;
   padding: 0;
 
@@ -9,6 +9,11 @@
 
   background-repeat: no-repeat;
   background-position: 50%;
+  background-size: contain;
+
+  mask-repeat: no-repeat;
+  mask-position: 50%;
+  mask-size: contain;
 }
 .icon:empty:after {
   visibility: hidden;
@@ -27,15 +32,91 @@
 /* Используется в качестве вспомогательного, декоративного элемента */
 /* Размеры получает через блок родителя, например button */
 
+.icon.icon_twitter {
+  background-image: url('/img/regular/icon/icon_twitter.svg');
+}
+.icon.icon_fb {
+  mask-image: url('/img/regular/icon/icon_fb.svg');
+  background-color: blue;
+  &_pale {
+    background-color: #fff;
+  }
+}
+
+.icon.icon_fb_hover {
+  background-image: url('/img/regular/icon/icon_fb_hover.svg');
+}
+
 .icon.icon_insta {
-  background-image: url('../img/sprite/icon.svg#icon_insta');
+  mask-image: url('/img/regular/icon/icon_insta.svg');
+  background-color: blue;
+  &_pale {
+    background-color: #fff;
+  }
 }
-// .icon.icon_insta {
-//   background-image: url('../img/icon_insta.svg');
-// }
-.icon.icon_viber {
-  background-image: url('../img/sprite/icon.svg#icon_viber');
+
+.icon.icon_insta_hover {
+  background-image: url('/img/regular/icon/icon_insta_hover.svg');
 }
-.icon.icon_visa {
-  background-image: url('../img/sprite/icon.svg#icon_visa');
+
+.icon.icon_phone {
+  mask-image: url('/img/regular/icon/icon_phone.svg');
+  background-color: #fff;
+}
+
+.icon.icon_mark {
+  mask-image: url('/img/regular/icon/icon_mark.svg');
+  background-color: #fff;
+}
+
+.icon.icon_arrow {
+  mask-image: url('/img/regular/icon/icon_arrow.svg');
+  background-color: $color_primary;
+  &_r_180 {
+    transform: scaleX(-1);
+  }
+}
+.icon.icon_burger {
+  mask-image: url('/img/regular/icon/icon_burger.svg');
+  background-color: #fff;
+}
+.icon.icon_cross {
+  mask-image: url('/img/regular/icon/icon_cross.svg');
+  background-color: #fff;
+}
+.icon.icon_money {
+  background-image: url('/img/regular/icon/icon_money.svg');
+}
+.icon.icon_secure {
+  background-image: url('/img/regular/icon/icon_secure.svg');
+}
+.icon.icon_success {
+  background-image: url('/img/regular/icon/icon_success.svg');
+}
+
+.icon.icon_privat {
+  background-image: url('/img/regular/icon/icon_privat.svg');
+}
+
+.icon.icon_mono {
+  background-image: url('/img/regular/icon/icon_mono.svg');
+}
+
+.icon.icon_swift {
+  background-image: url('/img/regular/icon/icon_swift.svg');
+}
+
+.icon.icon_paypal {
+  background-image: url('/img/regular/icon/icon_paypal.svg');
+}
+.icon.icon_usdt {
+  background-image: url('/img/regular/icon/icon_usdt.svg');
+}
+
+.icon.icon_btc {
+  background-image: url('/img/regular/icon/icon_btc.svg');
+}
+
+.icon.icon_eth {
+  background-image: url('/img/regular/icon/icon_eth.svg');
 }

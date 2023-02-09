@@ -1,10 +1,29 @@
 .link {
   display: inline;
+  position: relative;
   text-decoration: none;
-  color: pink;
   @include ts(color);
-  &:hover {
-    color: yellow;
-    cursor: pointer;
+  &::after {
+    @include ts(opacity);
+    opacity: 0;
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color_secondary;
   }
+  &:hover::after {
+    opacity: 1;
+  }
+  // &:hover {
+  //   .link::after {
+  //     content: '';
+  //     position: absolute;
+  //     height: 2px;
+  //     background-color: $color_secondary;
+  //   }
+  // }
 }

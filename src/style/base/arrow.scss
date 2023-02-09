@@ -1,0 +1,29 @@
+.arrow {
+  &__inner {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__item {
+    height: 43px;
+    width: 43px;
+    border: 1px solid $color_primary;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include ts(background-color);
+
+    &:hover {
+      background-color: blue;
+      .arrow__icon {
+        background-color: $color_secondary;
+      }
+    }
+  }
+
+  &__icon {
+    width: 10px;
+    height: 15px;
+  }
+}
