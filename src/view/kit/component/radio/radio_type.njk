@@ -1,0 +1,60 @@
+{% extends 'kit/layout/kit-cell-layout.njk' %}
+{% block cell %}
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">Radio group col</div>
+        </div>
+        <div class="kit__class">radio-group_type_col</div>
+        <div class="kit__current">
+            <div class="radio-group radio-group_type_col">
+                <div class="radio-group__inner">
+                    <label class="radio radio_size_l radio_view_primary">
+                        <div class="radio__inner">
+                            <span class="radio__box">
+                                <input class="radio__control" type="radio" name="testname">
+                            </span>
+                            <label class="radio__text" role="presentation">Первая кнопка</label>
+                        </div>
+                    </label>
+                    <label class="radio radio_size_l radio_view_primary">
+                        <div class="radio__inner">
+                            <span class="radio__box">
+                                <input class="radio__control" type="radio" name="testname">
+                            </span>
+                            <label class="radio__text" role="presentation">Вторая кнопка</label>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">Radio group row</div>
+        </div>
+        <div class="kit__class">radio-group_type_row</div>
+        <div class="kit__current">
+            <div class="radio-group radio-group_type_row">
+                <div class="radio-group__inner">
+                    <label class="radio radio_size_l radio_view_secondary">
+                        <div class="radio__inner">
+                            <span class="radio__box">
+                                <input class="radio__control" type="radio" name="testname">
+                            </span>
+                            <label class="radio__text" role="presentation">Первая кнопка</label>
+                        </div>
+                    </label>
+                    <label class="radio radio_size_l radio_view_secondary">
+                        <div class="radio__inner">
+                            <span class="radio__box">
+                                <input class="radio__control" type="radio" name="testname">
+                            </span>
+                            <label class="radio__text" role="presentation">Вторая кнопка</label>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock cell %}
+

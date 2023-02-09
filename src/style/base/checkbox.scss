@@ -1,0 +1,145 @@
+.checkbox {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.checkbox .checkbox__control {
+  position: absolute;
+  z-index: -1;
+
+  margin: 0;
+
+  opacity: 0;
+}
+
+.checkbox .checkbox__box {
+  position: relative;
+
+  border: 2px solid $color_primary;
+  @include ts(border-color);
+  background-color: #fff;
+}
+
+.checkbox .checkbox__box::after {
+  position: absolute;
+  top: -1px;
+  left: 0;
+
+  visibility: hidden;
+
+  content: '';
+  transition: transform 0.05s ease-out, opacity 0.05s ease-out,
+    visibility 0s linear 0.05s;
+
+  opacity: 0;
+
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.checkbox .checkbox__text {
+  @include ts(color);
+}
+/* Вид */
+
+/* Размеры */
+
+/* Размер - L */
+
+.checkbox.checkbox_size_l .checkbox__box {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+
+  border-radius: 4px;
+}
+
+.checkbox.checkbox_size_l .checkbox__box::after {
+  width: 18px;
+  height: 16px;
+
+  transform: translateY(-7px);
+
+  /* background-image: url("../img/icon/checbox_checked.svg"); */
+}
+.checkbox.checkbox_size_l .checkbox__text {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+/* Размер - L КОНЕЦ */
+
+/* Состояния */
+
+/* Hover */
+
+.checkbox.checkbox_state_hover .checkbox__box {
+  border-color: $color_secondary;
+}
+
+.checkbox.checkbox_state_hover .checkbox__text {
+  color: orange;
+}
+
+/* Hover КОНЕЦ */
+
+/* Checked */
+.checkbox.checkbox_state_checked .checkbox__box::after {
+  background-image: url('/img/regular/checkbox/icon_checbox_checked.svg');
+}
+
+.checkbox.checkbox_state_checked .checkbox__box::after {
+  visibility: visible;
+
+  transition-delay: 0s;
+  transform: translateY(0);
+
+  opacity: 1;
+}
+
+/* Checked КОНЕЦ*/
+
+/* Disabled */
+.checkbox.checkbox_state_disabled {
+  cursor: not-allowed;
+
+  color: $color_passive_dark;
+}
+
+.checkbox.checkbox_state_disabled .checkbox__box {
+  border-color: $color_faded;
+  background-color: $color_faded_light;
+  cursor: not-allowed;
+}
+
+.checkbox.checkbox_state_disabled.checkbox_state_checked .checkbox__box::after {
+  opacity: 0.6;
+}
+/* Disabled КОНЕЦ*/
+
+/* Disabled & Hover*/
+.checkbox.checkbox_state_disabled.checkbox.checkbox_state_hover {
+  color: rgb(0 0 0 / 0.35);
+}
+
+.checkbox.checkbox_state_disabled.checkbox.checkbox_state_hover .checkbox__box {
+  background: rgb(0 0 0 / 0.05);
+  border-color: rgb(0 0 0 / 0.35);
+  color: rgb(0 0 0 / 0.35);
+}
+
+.checkbox.checkbox_state_disabled.checkbox.checkbox_state_hover
+  .checkbox__text {
+  color: rgb(0 0 0 / 0.35);
+}
+.checkbox.checkbox_state_disabled.checkbox_state_checked.checkbox.checkbox_state_hover
+  .checkbox__box::after {
+  opacity: 0.8;
+}
+/* Disabled & Hover КОНЕЦ*/

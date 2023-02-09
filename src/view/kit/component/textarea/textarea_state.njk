@@ -1,0 +1,50 @@
+{% extends 'kit/layout/kit-cell-layout.njk' %}
+{% block cell %}
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">State hover</div>
+        </div>
+        <div class="kit__class">input_hover</div>
+        <div class="kit__current">
+            <textarea class="textarea textarea_view_primary textarea_size_l textarea_state_hover"></textarea>
+        </div>
+    </div>
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">State focus</div>
+        </div>
+        <div class="kit__class">input_state_focus</div>
+        <div class="kit__current">
+            <textarea class="textarea textarea_view_primary textarea_size_l textarea_state_focus"></textarea>
+        </div>
+    </div>
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">State success</div>
+        </div>
+        <div class="kit__class">input_state_success</div>
+        <div class="kit__current">
+            <textarea class="textarea textarea_view_primary textarea_size_l textarea_state_success"></textarea>
+        </div>
+    </div>
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">State error</div>
+        </div>
+        <div class="kit__class">input_state_error</div>
+        <div class="kit__current">
+            <textarea class="textarea textarea_view_primary textarea_size_l textarea_state_error"></textarea>
+        </div>
+    </div>
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">State disabled</div>
+        </div>
+        <div class="kit__class">input_state_disabled</div>
+        <div class="kit__current">
+            <textarea class="textarea textarea_view_primary textarea_size_l textarea_state_disabled"
+                      disabled></textarea>
+        </div>
+    </div>
+{% endblock cell %}
+

@@ -1,0 +1,92 @@
+.button {
+  position: relative;
+
+  align-items: center;
+
+  justify-content: center;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+
+  outline: 0;
+  touch-action: manipulation;
+
+  & .button__text {
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    vertical-align: top;
+  }
+
+  /* HOVER */
+  &:hover {
+    cursor: pointer;
+  }
+}
+/* Модификаторы */
+.button_width_available {
+  width: 100%;
+}
+
+/* Модификаторы КОНЕЦ */
+/* View */
+.button.button_view_primary {
+  background: $gradient;
+
+  background-position-x: 50%;
+  background-size: 150%;
+
+  & .button__text {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.1em;
+  }
+
+  &:hover {
+    background-position-x: 0%;
+  }
+  @include ts(background-position-x);
+}
+
+.button.button_view_secondary {
+  background: $color_light;
+
+  border: 1px solid transparent;
+  & .button__text {
+    text-transform: uppercase;
+    color: $color_primary;
+    letter-spacing: 0.1em;
+  }
+
+  &:hover {
+    border-color: $color_secondary;
+  }
+  @include ts(border-color);
+}
+
+/* View END */
+
+/* Модификаторы КОНЕЦ */
+
+/* Размеры кнопок */
+
+/* L - Начало */
+.button.button_size_l {
+  border-radius: 60px;
+
+  font-size: 14px;
+  line-height: 50px;
+  font-weight: 500;
+}
+
+.button_size_l .button__text {
+  margin: 0 55px;
+}
+
+/* L - КОНЕЦ */

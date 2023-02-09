@@ -1,0 +1,12 @@
+{% set inject = { layoutClass: "page page_theme layout deco kit"} %}
+{% extends "layout/layout.njk" %}
+{% block main %}
+    {% set kit = {sectionName: "Buttons"} %}
+    {% include "kit/section/kit-button-section.njk" %}
+    {% set kit = {sectionName: "Input"} %}
+    {% include "kit/section/kit-input-section.njk" %}
+    {% set kit = {sectionName: "Textarea"} %}
+    {% include "kit/section/kit-textarea-section.njk" %}
+    {% set kit = {sectionName: "Checkbox"} %}
+    {% include "kit/section/kit-checkbox-section.njk" %}
+{% endblock main %}

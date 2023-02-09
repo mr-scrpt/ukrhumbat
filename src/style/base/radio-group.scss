@@ -1,0 +1,18 @@
+.radio-group {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+.radio-group.radio-group_type_col {
+  .radio-group__inner {
+    flex-direction: column;
+  }
+}
+
+.radio-group.radio-group_type_row {
+  .radio-group__inner {
+    flex-direction: row;
+  }
+}

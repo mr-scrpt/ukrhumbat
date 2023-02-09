@@ -1,0 +1,46 @@
+{% extends 'kit/layout/kit-cell-layout.njk' %}
+{% block cell %}
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">State disabled</div>
+        </div>
+        <div class="kit__class">input_state_disabled</div>
+        <div class="kit__current">
+            <label class="label checkbox checkbox_size_l checkbox_state_disabled">
+                <span class="checkbox__box">
+                    <input class="checkbox__control" disabled type="checkbox"/>
+                </span>
+                <span class="checkbox__text">Текст</span>
+            </label>
+        </div>
+    </div>
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">State disabled checked</div>
+        </div>
+        <div class="kit__class">input_state_disabled input_state_checked</div>
+        <div class="kit__current">
+            <label class="label checkbox checkbox_size_l checkbox_state_checked checkbox_state_disabled">
+                <span class="checkbox__box">
+                    <input class="checkbox__control" disabled type="checkbox"/>
+                </span>
+                <span class="checkbox__text">Текст</span>
+            </label>
+        </div>
+    </div>
+    <div class="kit__item">
+        <div class="kit__title">
+            <div class="kit__title-mini">State hover</div>
+        </div>
+        <div class="kit__class">checkbox_state_hover</div>
+        <div class="kit__current">
+            <label class="label checkbox checkbox_size_l checkbox_state_hover">
+                <span class="checkbox__box">
+                    <input class="checkbox__control" disabled type="checkbox"/>
+                </span>
+                <span class="checkbox__text">Текст</span>
+            </label>
+        </div>
+    </div>
+{% endblock cell %}
+

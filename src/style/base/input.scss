@@ -1,0 +1,96 @@
+.input {
+  position: relative;
+  display: inline-flex;
+  touch-action: manipulation;
+  max-width: 100%;
+  @include ts(border-color);
+}
+
+.input .input__box {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.input .input__control {
+  max-width: 100%;
+  width: 100%;
+  font: inherit;
+  line-height: inherit;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: none;
+  color: black;
+}
+
+/*Вью полей*/
+.input.input_view_primary {
+  border: 2px solid $color_primary;
+  & .input__control::placeholder {
+    color: #ccc;
+  }
+}
+/*Вью полей КОНЕЦ*/
+
+/*Стэйт полей*/
+
+.input.input_state_focus {
+  border-color: $color_dark;
+}
+
+.input.input_state_hover {
+  border-color: $color_secondary;
+}
+
+.input.input_state_error {
+  border-color: $color_attention;
+}
+
+.input.input_state_success {
+  border-color: $color_success;
+}
+
+.input.input_state_disabled {
+  border-color: $color_faded;
+  background-color: $color_faded_light;
+  cursor: not-allowed;
+  .input__control {
+    cursor: not-allowed;
+  }
+}
+/* Стэйт полей КОНЕЦ*/
+
+/* Модификации */
+
+.input.input_width_available {
+  width: 100%;
+  & .input__control {
+    width: 100%;
+  }
+}
+
+/*Модификации КОНЕЦ*/
+
+/*L - Начало*/
+.input.input_size_l {
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 5px;
+}
+
+.input.input_size_l .input__control {
+  height: 32px;
+  padding: 0 10px;
+  &::placeholder {
+    color: $color_primary_light;
+  }
+}
+
+/*L - КОНЕЦ*/

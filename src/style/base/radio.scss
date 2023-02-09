@@ -1,0 +1,134 @@
+.radio {
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__box {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__control {
+    position: absolute;
+    z-index: -1;
+
+    opacity: 0;
+  }
+}
+
+/* Size */
+
+/* Size - S */
+.radio.radio_size_s .radio__box {
+  width: 14.8px;
+  height: 14.8px;
+  margin-right: 5px;
+}
+
+.radio.radio_size_s .radio__text {
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.radio.radio_size_s.radio_state_checked .radio__box {
+  &::before {
+    width: 8.4px;
+    height: 8.4px;
+    background-color: black;
+  }
+}
+/* Size - S END */
+
+/* Size - M */
+.radio.radio_size_m .radio__box {
+  width: 16.8px;
+  height: 16.8px;
+  margin-right: 5px;
+}
+
+.radio.radio_size_m .radio__text {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.radio.radio_size_m.radio_state_checked .radio__box {
+  &::before {
+    width: 10.4px;
+    height: 10.4px;
+    background-color: black;
+  }
+}
+/* Size - M END */
+
+/* Size - L */
+.radio.radio_size_l .radio__box {
+  width: 16.8px;
+  height: 16.8px;
+  margin-right: 5px;
+}
+
+.radio.radio_size_l .radio__text {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.radio.radio_size_l.radio_state_checked .radio__box {
+  &::before {
+    width: 10.4px;
+    height: 10.4px;
+    background-color: black;
+  }
+}
+/* Size - L END */
+
+/* Size - XL */
+.radio.radio_size_xl .radio__box {
+  width: 18.8px;
+  height: 18.8px;
+  margin-right: 5px;
+}
+
+.radio.radio_size_xl .radio__text {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.radio.radio_size_xl.radio_state_checked .radio__box {
+  &::before {
+    width: 12.4px;
+    height: 12.4px;
+    background-color: black;
+  }
+}
+/* Size - XL END */
+/* State */
+.radio.radio_state_checked .radio__box {
+  &::before {
+    content: '';
+  }
+}
+
+/* State END*/
+
+/* View */
+
+/* View primary*/
+.radio.radio_view_primary .radio__box {
+  border: 1px solid black;
+}
+/* View primary END*/
+
+/* View section*/
+.radio.radio_view_secondary .radio__box {
+  border: 1px solid black;
+  border-radius: 50%;
+  &::before {
+    border-radius: 50%;
+  }
+}
+/* View primary END*/
+/* State END*/

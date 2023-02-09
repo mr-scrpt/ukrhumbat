@@ -1,0 +1,15 @@
+.page {
+  &_theme {
+    font: 14px / 2.14 'Rubik', sans-serif;
+    color: $font_color;
+    background: $background_main;
+  }
+  &_overflow {
+    overflow: hidden;
+  }
+  &__header {
+  }
+
+  &__footer {
+  }
+}
