@@ -49,6 +49,7 @@
     "gulp-replace": "latest",
     "gulp-sass": "latest",
     "gulp-svg-sprite": "latest",
+    "gulp-tinypng-compress": "^1.2.5",
     "gulp-ttf2woff2": "latest",
     "gulp-util": "latest",
     "gulp-version-number": "latest",

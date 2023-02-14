@@ -1,8 +1,8 @@
-// import webp from 'gulp-webp'
-import imagemin from 'gulp-imagemin'
-export const image = () => {
+import tinypng from 'gulp-tinypng-compress'
+
+export const imageToTiny = () => {
   return app.gulp
-    .src(app.direction.src.image)
+    .src(app.direction.src.imageToTiny)
     .pipe(
       app.plugin.plumber(
         app.plugin.notify.onError({
@@ -15,11 +15,10 @@ export const image = () => {
     .pipe(
       app.plugin.ifCustom(
         app.isBuild,
-        imagemin({
-          progressive: true,
-          svgoPlugins: [{ removeViewBox: false }],
-          interlaced: true,
-          optimizationLevel: 3, // 0 to 7
+        tinypng({
+          key: 'LGLJp7yYxtx9Z3BqQ4N64mNP8k0b4C0p',
+          // sigFile: 'images/.tinypng-sigs',
+          log: true,
         })
       )
     )

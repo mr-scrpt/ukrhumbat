@@ -25,6 +25,7 @@ import { server } from './config/task/server.js'
 import { scss } from './config/task/scss.js'
 import { js } from './config/task/js.js'
 import { image } from './config/task/image.js'
+import { imageToTiny } from './config/task/imageToTiny.js'
 import {
   otfToTtf,
   ttfToWoff,
@@ -45,6 +46,7 @@ function watcher() {
   gulp.watch(direction.watch.scss, scss)
   gulp.watch(direction.watch.js, js)
   gulp.watch(direction.watch.image, image)
+  gulp.watch(direction.watch.imageToTiny, imageToTiny)
   gulp.watch(direction.watch.sprite, svgSprive)
 }
 
@@ -63,7 +65,7 @@ const font = gulp.series(
 // Основные задачи
 const maintask = gulp.series(
   font,
-  gulp.parallel(copy, nunjak, scss, js, image, svgSprive)
+  gulp.parallel(copy, nunjak, scss, js, image, imageToTiny, svgSprive)
 )
 
 // Построение сценариев выполнения задач
@@ -87,4 +89,5 @@ export { deployFTP }
 gulp.task('watch', dev)
 // Выполнение сценария по умолчанию
 gulp.task('img', image)
+gulp.task('imageToTiny', imageToTiny)
 gulp.task('font', font)

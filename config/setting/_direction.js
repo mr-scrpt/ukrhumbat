@@ -19,9 +19,8 @@ export const direction = {
   },
   src: {
     js: `${srcFolder}/js/app.js`,
-    imageToTiny: `${srcFolder}/img/regular/**/*.{jpg,jpeg,png}`,
-    image: `${srcFolder}/img/regular/**/*.{gif,ico,webp,svg}`,
-    // svg: `${srcFolder}/img/regular/**/*.svg`,
+    image: `${srcFolder}/img/regular/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
+    // svg: `${srcFolder}/img/**/*.svg`,
     scss: `${srcFolder}/style/app.scss`,
     html: `${srcFolder}/*.html`, //.pug
     nunjak: `${srcFolder}/view/page/*.njk`, //.pug
@@ -34,8 +33,7 @@ export const direction = {
     scss: `${srcFolder}/style/**/*.scss`,
     html: `${srcFolder}/**/*.html`, //.pug
     nunjak: `${srcFolder}/**/*.njk`, //.pug
-    imageToTiny: `${srcFolder}/img/regular/**/*.{jpg,jpeg,png}`,
-    image: `${srcFolder}/img/regular/**/*.{svg,gif,ico,webp}`,
+    image: `${srcFolder}/img/regular/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
     sprite: `${srcFolder}/img/sprite/**/*.svg`,
     file: `${srcFolder}/file/**/*.*`,
   },
