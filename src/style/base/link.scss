@@ -1,23 +1,31 @@
 .link {
-  display: inline;
   position: relative;
+
+  display: inline;
+
   text-decoration: none;
-  @include ts(color);
+
   &::after {
-    @include ts(opacity);
-    opacity: 0;
-    content: '';
     position: absolute;
-    height: 2px;
-    width: 100%;
     bottom: -5px;
     left: 50%;
+
+    width: 100%;
+    height: 2px;
+
+    content: '';
     transform: translateX(-50%);
+
+    opacity: 0;
     background-color: $color_secondary;
+    @include ts(opacity);
   }
+
   &:hover::after {
     opacity: 1;
   }
+  @include ts(color);
+
   // &:hover {
   //   .link::after {
   //     content: '';

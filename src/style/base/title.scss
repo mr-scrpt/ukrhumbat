@@ -1,39 +1,42 @@
 .title {
   display: flex;
+
   &__text {
   }
 }
+
 /* View */
+
 /* View primary */
 .title.title_view_primary {
   .title__text {
-    text-transform: uppercase;
+    // text-transform: uppercase;
+
     color: black;
+
+    font-weight: 500;
   }
 }
-/* View primary END */
-$gradient: linear-gradient(
-  90deg,
-  #025fa7 0,
-  #1682d4 25%,
-  #00b0d0 50%,
-  #09d3f6 75%,
-  #42e3ff 100%
-);
 
-/* View primary */
+/* View primary END */
+
+/* View secondary */
 .title.title_view_secondary {
   .title__text {
     background: $gradient;
+    background-clip: text;
+
     font-weight: 500;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
-/* View primary END */
+
+/* View section END */
+
 /* View END */
 
 /* Size */
+
 /* Size S */
 .title.title_size_s {
   .title__text {
@@ -41,6 +44,7 @@ $gradient: linear-gradient(
     line-height: 14px;
   }
 }
+
 /* Size S END */
 
 /* Size M */
@@ -50,23 +54,34 @@ $gradient: linear-gradient(
     line-height: 18px;
   }
 }
+
 /* Size S END */
 
-/* Size S*/
+/* Size S */
 .title.title_size_l {
   .title__text {
     font-size: 24px;
     line-height: 24px;
   }
 }
+
 /* Size S END */
 
 /* Size S */
 .title.title_size_xl {
   .title__text {
-    font-size: 38px;
-    line-height: 38px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @include bp994-block {
+    .title__text {
+      font-size: 38px;
+      line-height: 38px;
+    }
   }
 }
+
 /* Size S END */
+
 /* Size END */

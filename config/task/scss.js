@@ -21,7 +21,7 @@ export const scss = () => {
           })
         )
       )
-      .pipe(app.plugin.replace(/@img\//g, '../img/'))
+      // .pipe(app.plugin.replace(/@img\//g, '../img/'))
       .pipe(
         sass({
           outputStyle: 'expanded',
@@ -35,19 +35,26 @@ export const scss = () => {
           cascade: true,
         })
       )
-      .pipe(
-        app.plugin.ifCustom(
-          app.isBuild,
-          webpcss({
-            webpClass: '.webp',
-            noWebpClass: '.no-webp',
-          })
-        )
-      )
+      // .pipe(
+      //   app.plugin.ifCustom(
+      //     app.isBuild,
+      //     webpcss({
+      //       webpClass: '.webp',
+      //       noWebpClass: '.no-webp',
+      //     })
+      //   )
+      // )
       // Раскомментировать если нужен не сжатый дубль файла стилей
       .pipe(app.gulp.dest(app.direction.build.css))
       .pipe(app.plugin.browsersync.stream())
-      .pipe(app.plugin.ifCustom(app.isBuild, cleanCss()))
+      .pipe(
+        app.plugin.ifCustom(
+          app.isBuild,
+          cleanCss({
+            level: 2,
+          })
+        )
+      )
       .pipe(
         rename({
           extname: '.min.css',

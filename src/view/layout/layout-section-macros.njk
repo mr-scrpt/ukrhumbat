@@ -1,0 +1,16 @@
+{% macro layout_base_section(params) -%}
+    <section class="section layout__section {{ params.sectionClass }}">
+        <div class="section__inner {{ params.sectionInnerClass }}">
+            {# {% if params.sectionDecoText %}<div class="section__flat">{{ params.sectionDecoText }}</div>{% endif %} #}
+            <div class="{{ params.layoutClass }}"
+                 data-text="{{ params.sectionDecoText }}">
+                {% if params.titleText %}
+                    <div class="section__title title title_view_primary title_size_xl">
+                        <div class="title__text">{{ params.titleText }}</div>
+                    </div>
+                {% endif %}
+                {% include "component/" + params.component + "/" + params.component + ".njk" ignore missing %}
+            </div>
+        </div>
+    </section>
+{%- endmacro %}

@@ -1,0 +1,31 @@
+.news {
+  &__inner {
+    position: relative;
+
+    justify-content: center;
+    @include row-flex;
+  }
+
+  &__textbox {
+    margin-bottom: 25px;
+    @include col;
+    @include size(12);
+
+    @include size-bp994(5);
+    @include size-bp1100(4);
+    @include bp994-block {
+      padding-left: 0;
+    }
+  }
+
+  &__sliderbox {
+    @include col;
+    @include size(12);
+    @include size-bp994(5);
+    @include size-bp1100(6);
+
+    @include bp1100-block {
+      padding-left: 50px;
+    }
+  }
+}

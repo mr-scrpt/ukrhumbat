@@ -1,15 +1,47 @@
 .text {
-  &__paragraph {
-    margin-bottom: 15px;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 400;
+  &__title {
+    margin-bottom: 25px;
     @include bp994-block {
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
   }
 
-  &__b600 {
+  // &__title-sub {
+  //   margin-bottom: 25px;
+  //   @include bp994-block {
+  //     &:last-child {
+  //       margin-bottom: 35px;
+  //     }
+  //   }
+  // }
+
+  &__item {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    &_last {
+      margin-bottom: 35px;
+    }
+
+    @include bp994-block {
+      margin-bottom: 35px;
+
+      font-size: 16px;
+      line-height: 21px;
+
+      &_last {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__link {
+    color: $color_primary;
+
+    font-size: 14px;
+
     font-weight: 600;
   }
 }

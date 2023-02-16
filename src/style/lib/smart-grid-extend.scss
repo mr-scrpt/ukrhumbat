@@ -1,0 +1,5 @@
+@mixin shift-full($n) {
+  $val: 100% / $columns * $n;
+  margin-right: #{calc(#{$val} + #{$offset_one_side * 2})};
+  margin-left: #{calc(#{$val} + #{$offset_one_side * 2})};
+}

@@ -1,15 +1,26 @@
-{% set inject = { layoutClass: "page page_theme layout deco"} %} {% extends
-"layout/layout.njk" %} {% block main %}
-
-
-
-{% set inject = { wrapper: 'wrap', sectionInner: '' } %}
-<!-- {% include "section/header-section.njk" %} -->
-<!--  Header END-->
-<!-- Hero seciton -->
-{% include "section/hero-section.njk" %}
-<!-- Hero seciton END -->
-<!--  Footer -->
-{% include "component/footer/footer.njk" %}
-<!--  Footer END-->
+{% set inject = { layoutClass: "page page_theme layout deco"} %}
+{% extends "layout/layout.njk" %}
+{%- from "layout/layout-section-macros.njk" import layout_base_section -%}
+{% block main %}
+    {#  About seciton #}
+    {{ layout_base_section({
+    component: 'about',
+    titleText: 'Про нас',
+    layoutClass: 'layout__wrap',
+    sectionClass: 'deco__section-secondary',
+    sectionInnerClass:''
+    })
+    }}
+    {# About seciton END #}
+    {# News seciton #}
+    {{ layout_base_section({
+    component: 'news',
+    titleName: 'Новости',
+    layoutClass: 'layout__wrap deco__text-shadow',
+    sectionClass: '',
+    sectionInnerClass:'',
+    sectionDecoText: 'Новости'
+    })
+    }}
+    {# News seciton END #}
 {% endblock main %}

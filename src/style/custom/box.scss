@@ -1,0 +1,52 @@
+.box {
+  &__girdbox {
+    @include row-flex;
+  }
+
+  &__girdcol {
+    background-color: yellow;
+    @include col;
+    @include size(1);
+  }
+
+  &__girdbox2 {
+    justify-content: center;
+    @include row-flex;
+  }
+
+  &__girdcol2 {
+    background-color: yellow;
+    @include col;
+    @include size(1);
+  }
+
+  &__girdbox3 {
+    justify-content: center;
+    @include row-flex;
+  }
+
+  &__girdcol3 {
+    background-color: yellow;
+    @include col;
+    @include size(8);
+  }
+
+  &__girdbox4 {
+    justify-content: center;
+    @include row-flex;
+  }
+
+  &__girdcol4 {
+    background-color: yellow;
+    @include col;
+    @include size(5);
+  }
+
+  &__text {
+    background-color: blue;
+
+    // @include shift(1);
+    // @include col;
+    // @include size(8);
+  }
+}
