@@ -11,6 +11,33 @@
                 <a href="#" class="text__link link">Читати повністю</a>
             </div>
         </div>
-        <div class="news__sliderbox"></div>
+        <div class="news__sliderbox">
+            <div class="swiper news__slider">
+                <div class="swiper-wrapper">
+                    {% for item in params.news_list %}
+                        <div class="news__item swiper-slide">
+                            <div class="news__item-imgbox">
+                                <img src="/img/regular/content/news/news-item_{{ loop.index }}.jpg"
+                                     alt=""
+                                     class="news__item-img img">
+                            </div>
+                            <div class="news__item-title">{{ item.title }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="news__nav">
+                <div class="news__nav-prev">
+                    <div class="arrow__item kit-pagination__arrow_prev">
+                        <div class="arrow__icon icon icon_arrow icon_arrow_r_180"></div>
+                    </div>
+                </div>
+                <div class="news__nav-next">
+                    <div class="arrow__item kit-pagination__arrow_next">
+                        <div class="arrow__icon icon icon_arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

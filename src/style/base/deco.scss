@@ -12,7 +12,7 @@
 
       left: -15px;
 
-      height: 165px;
+      // height: 165px;
 
       content: attr(data-text);
       text-transform: uppercase;
@@ -21,10 +21,23 @@
 
       // transform: rotate(-90deg) translate(-50%, -100%);
 
-      font-size: 165px;
+      font-size: 100px;
       font-weight: 500;
-      line-height: 165px;
+      line-height: 100px;
       writing-mode: vertical-lr;
+    }
+
+    @include bp994-block {
+      &::before {
+        font-size: 125px;
+        line-height: 125px;
+      }
+    }
+    @include bp1440-block {
+      &::before {
+        font-size: 165px;
+        line-height: 165px;
+      }
     }
   }
 
