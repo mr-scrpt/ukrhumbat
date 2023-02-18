@@ -1,0 +1,32 @@
+<div class="result slider">
+    <div class="slider__inner">
+        <div class="slider__row swiper">
+            <div class="swiper-wrapper">
+                {% for item in params.result_list %}
+                    <div class="result__item swiper-slide">
+                        <div class="result-item__inner">
+                            <div class="result-item__titlebox">
+                                <div class="result-item__title">{{ item.title }}</div>
+                            </div>
+                            <div class="result-item__textbox">
+                                <div class="result-item__text">{{ item.text }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="slider__nav">
+            <div class="result__nav-prev">
+                <div class="arrow__item kit-pagination__arrow_prev">
+                    <div class="arrow__icon icon icon_arrow icon_arrow_r_180"></div>
+                </div>
+            </div>
+            <div class="result__nav-next">
+                <div class="arrow__item kit-pagination__arrow_next">
+                    <div class="arrow__icon icon icon_arrow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

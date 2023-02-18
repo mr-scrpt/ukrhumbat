@@ -39,10 +39,6 @@
   }
 
   &__slider {
-    margin-bottom: 40px;
-    @include bp994-block {
-      margin-bottom: 80px;
-    }
   }
 
   &__item {
@@ -71,17 +67,5 @@
   }
 
   &__nav {
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-
-    width: 100%;
-
-    gap: 20px;
-
-    @include bp994-block {
-      justify-content: flex-start;
-    }
   }
 }

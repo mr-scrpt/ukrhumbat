@@ -1,0 +1,39 @@
+.slider {
+  &__inner {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    margin-right: -15px;
+    margin-left: -15px;
+
+    @include bp768-block {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__row {
+    margin-bottom: 40px;
+    @include bp994-block {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__nav {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 20px;
+
+    &_l {
+      @include bp994-block {
+        justify-content: flex-start;
+      }
+    }
+  }
+}

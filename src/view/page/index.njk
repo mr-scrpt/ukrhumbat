@@ -24,4 +24,15 @@
     })
     }}
     {# News seciton END #}
+    {# Result seciton #}
+    {{ layout_base_section({
+    component: 'result',
+    titleText: 'Наши результаты',
+    layoutClass: 'layout__wrap',
+    sectionClass: '',
+    sectionInnerClass:'deco__section-secondary',
+    result_list: result.result_list
+    })
+    }}
+    {# Result seciton END #}
 {% endblock main %}

@@ -5,17 +5,23 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 Swiper.use([Navigation, Pagination, Autoplay, Thumbs])
-// Paysys slider
+// News slider
 $(() => {
-  // const [paginationElem] = $('.paysys__pagination')
   const [navNext] = $('.news__nav-next')
   const [navPrev] = $('.news__nav-prev')
-  sliderGen('.news__slider.swiper', optionsPaysys({ navNext, navPrev }))
+  sliderGen('.news .swiper', optionsNews({ navNext, navPrev }))
+})
+
+// Result slider
+$(() => {
+  const [navNext] = $('.result__nav-next')
+  const [navPrev] = $('.result__nav-prev')
+  sliderGen('.result .swiper', optionsResult({ navNext, navPrev }))
 })
 
 const sliderGen = (block, option) => new Swiper(block, option)
 
-const optionsPaysys = ({ navNext, navPrev, pagination }) => ({
+const optionsNews = ({ navNext, navPrev, pagination }) => ({
   spaceBetween: 20,
   // autoplay: true,
   loop: true,
@@ -50,26 +56,35 @@ const optionsPaysys = ({ navNext, navPrev, pagination }) => ({
     },
   },
 })
-const optionsPosition = (prev, next) => ({
-  slidesPerView: 1,
-  spaceBetween: 15,
-  navigation: {
-    nextEl: next || null,
-    prevEl: prev || null,
+const optionsResult = ({ navNext, navPrev, pagination }) => ({
+  spaceBetween: 20,
+  // autoplay: true,
+  loop: true,
+  centeredSlides: true,
+  pagination: {
+    el: pagination || null,
+    clickable: true,
   },
-  autoplay: {
-    delay: 5000,
+  navigation: {
+    nextEl: navNext,
+    prevEl: navPrev,
   },
   breakpoints: {
-    480: {
+    320: {
+      slidesPerView: 1.4,
+      centeredSlides: true,
+    },
+    520: {
       slidesPerView: 2,
+      centeredSlides: true,
     },
-    // when window width is >= 640px
-    994: {
+    768: {
       slidesPerView: 3,
+      centeredSlides: false,
     },
-    1200: {
+    994: {
       slidesPerView: 4,
+      centeredSlides: false,
     },
   },
 })

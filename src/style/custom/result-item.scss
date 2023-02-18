@@ -1,0 +1,47 @@
+.result-item {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    border-radius: 15px;
+
+    background: $gradient;
+  }
+
+  &__titlebox {
+    display: flex;
+    justify-content: center;
+
+    padding: 36px 30px;
+
+    text-align: center;
+
+    border-bottom: 2px solid $color_light;
+  }
+
+  &__title {
+    color: $color_light;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &__textbox {
+    padding: 36px 30px;
+  }
+
+  &__text {
+    color: $color_light;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+}
+
+// .swiper-slide {
+//   height: auto;
+// }

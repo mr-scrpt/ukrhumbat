@@ -1,0 +1,22 @@
+.result {
+  &__inner {
+  }
+
+  &__item {
+  }
+
+  &__nav {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+
+    gap: 20px;
+
+    @include bp994-block {
+      justify-content: flex-start;
+    }
+  }
+}
