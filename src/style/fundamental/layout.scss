@@ -13,6 +13,14 @@
     @include wrapper;
   }
 
-  &__full {
+  &__row {
+    justify-content: center;
+    @include row-flex;
+  }
+
+  &__row-box {
+    @include col;
+    @include size(12);
+    @include size-bp994(10);
   }
 }

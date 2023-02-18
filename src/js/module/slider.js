@@ -16,8 +16,61 @@ $(() => {
 $(() => {
   const [navNext] = $('.result__nav-next')
   const [navPrev] = $('.result__nav-prev')
-  sliderGen('.result .swiper', optionsResult({ navNext, navPrev }))
+
+  const bp = 1440
+  const options = optionsResult({ navNext, navPrev })
+  sliderCheckBrakepoint('.result .swiper', options, bp)
+  // sliderGen('.result .swiper', optionsResult({ navNext, navPrev }))
 })
+
+const sliderClassController = (
+  $sliderElem,
+  $sliderWrapper,
+  $sliderItem,
+  type
+) => {
+  // const $sliderElem = $(mainClass)
+
+  if (type === 'rm') {
+    $sliderElem.removeClass('swiper')
+    $sliderWrapper.removeClass('swiper-wrapper')
+    $sliderItem.removeClass('swiper-slider')
+  } else {
+    $sliderElem.addClass('swiper')
+    $sliderWrapper.addClass('swiper-wrapper')
+    $sliderItem.addClass('swiper-slider')
+  }
+}
+// Slider controller brakepoint
+const sliderCheckBrakepoint = (sliderClass, options, bp) => {
+  const windowWidth = +$(window).width()
+
+  const $sliderElem = $(sliderClass)
+  const $sliderWrapper = $sliderElem.find('.swiper-wrapper')
+  const $sliderItem = $sliderElem.find('.swiper-slide')
+
+  let slider = Swiper
+  let sliderInit = false
+  if (windowWidth < bp) {
+    slider = sliderGen(sliderClass, options)
+    sliderInit = true
+  } else {
+    sliderClassController($sliderElem, $sliderWrapper, $sliderItem, 'rm')
+  }
+
+  $(window).on('resize', () => {
+    const windowWidth = +$(window).width()
+    if (sliderInit && bp <= windowWidth) {
+      slider.destroy()
+      sliderClassController($sliderElem, $sliderWrapper, $sliderItem, 'rm')
+      sliderInit = false
+    } else if (!sliderInit && bp >= windowWidth) {
+      sliderClassController($sliderElem, $sliderWrapper, $sliderItem, 'add')
+      slider = sliderGen(sliderClass, options)
+      sliderInit = true
+    }
+  })
+}
 
 const sliderGen = (block, option) => new Swiper(block, option)
 
@@ -60,7 +113,7 @@ const optionsResult = ({ navNext, navPrev, pagination }) => ({
   spaceBetween: 20,
   // autoplay: true,
   loop: true,
-  centeredSlides: true,
+  centeredSlides: false,
   pagination: {
     el: pagination || null,
     clickable: true,
@@ -82,7 +135,7 @@ const optionsResult = ({ navNext, navPrev, pagination }) => ({
       slidesPerView: 3,
       centeredSlides: false,
     },
-    994: {
+    1100: {
       slidesPerView: 4,
       centeredSlides: false,
     },

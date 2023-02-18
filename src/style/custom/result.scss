@@ -2,7 +2,25 @@
   &__inner {
   }
 
+  &__box {
+    @include col;
+    @include size(10);
+  }
+
+  &__wrapper {
+    @include bp1440-block {
+      justify-content: center;
+      @include row-flex;
+    }
+  }
+
   &__item {
+    @include bp1440-block {
+      height: auto;
+      margin-bottom: 30px;
+      @include col;
+    }
+    @include size-bp1440(4);
   }
 
   &__nav {
@@ -15,8 +33,16 @@
 
     gap: 20px;
 
-    @include bp994-block {
-      justify-content: flex-start;
+    @include bp1440-block {
+      display: none;
     }
   }
+}
+
+.result .result__item {
+  @include bp1440-block {
+    height: auto;
+    @include col;
+  }
+  @include size-bp1440(3);
 }
