@@ -24,7 +24,7 @@ export const direction = {
     // svg: `${srcFolder}/img/regular/**/*.svg`,
     scss: `${srcFolder}/style/app.scss`,
     html: `${srcFolder}/*.html`, //.pug
-    nunjak: `${srcFolder}/view/page/*.njk`, //.pug
+    nunjak: `${srcFolder}/view/page/*.html`, //.pug
     font: `${srcFolder}/font/*.{woff,woff2,ttf,otf}`,
     file: `${srcFolder}/file/**/*.*`,
     sprite: `${srcFolder}/img/sprite/**/*.svg`,
@@ -33,7 +33,7 @@ export const direction = {
     js: `${srcFolder}/js/**/*.js`,
     scss: `${srcFolder}/style/**/*.scss`,
     html: `${srcFolder}/**/*.html`, //.pug
-    nunjak: `${srcFolder}/**/*.njk`, //.pug
+    nunjak: `${srcFolder}/**/*.html`, //.pug
     imageToTiny: `${srcFolder}/img/regular/**/*.{jpg,jpeg,png}`,
     image: `${srcFolder}/img/regular/**/*.{svg,gif,ico,webp}`,
     sprite: `${srcFolder}/img/sprite/**/*.svg`,
