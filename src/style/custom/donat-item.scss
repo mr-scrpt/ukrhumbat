@@ -15,6 +15,13 @@
     padding: 15px 30px;
 
     background: $gradient;
+    @include bp1100-block {
+      flex-direction: row;
+      justify-content: space-between;
+
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
   }
 
   &__header {
@@ -34,17 +41,80 @@
     }
 
     &_end {
-      align-self: end;
+      align-self: flex-end;
+    }
+
+    @include bp1100-block {
+      font-size: 32px;
+      line-height: 32px;
+
+      &_center {
+        align-self: auto;
+      }
+
+      &_end {
+        align-self: auto;
+      }
     }
   }
 
   &__contentbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 50px 25px;
+
     background-color: $color_light;
+    @include bp768-block {
+      padding: 100px 130px;
+    }
   }
 
   &__title {
+    max-width: 350px;
+    padding-bottom: 40px;
+
+    text-align: center;
+
     font-size: 30px;
+    font-weight: 500;
     line-height: 36px;
     @extend %text-gradient;
+
+    @include bp768-block {
+      max-width: 420px;
+      padding-bottom: 60px;
+    }
+    @include bp1100-block {
+      max-width: 700px;
+
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+
+  &__text {
+    max-width: 280px;
+    padding-bottom: 40px;
+
+    text-align: center;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    @include bp768-block {
+      max-width: 650px;
+      padding-bottom: 60px;
+    }
+    @include bp1100-block {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  &__buttonbox {
+    display: flex;
+    justify-content: center;
   }
 }
