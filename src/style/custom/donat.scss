@@ -1,0 +1,11 @@
+.donat {
+  &__inner {
+    justify-content: center;
+    @include row-flex;
+  }
+
+  &__item {
+    @include col;
+    @include size(10);
+  }
+}

@@ -19,8 +19,14 @@
   }
 
   &__row-box {
+    width: 100%;
+
     @include col;
-    @include size(12);
+    @include size-bp768(12);
     @include size-bp994(10);
+  }
+
+  &__section {
+    overflow: hidden;
   }
 }

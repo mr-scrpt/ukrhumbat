@@ -1,0 +1,50 @@
+.donat-item {
+  &__inner {
+    display: flex;
+    overflow: hidden;
+    flex-flow: wrap;
+    flex-direction: column;
+
+    border-radius: 15px;
+  }
+
+  &__headerbox {
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px 30px;
+
+    background: $gradient;
+  }
+
+  &__header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    text-transform: uppercase;
+
+    color: $color_passive_light;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+
+    &_center {
+      align-self: center;
+    }
+
+    &_end {
+      align-self: end;
+    }
+  }
+
+  &__contentbox {
+    background-color: $color_light;
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+    @extend %text-gradient;
+  }
+}

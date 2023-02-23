@@ -23,11 +23,8 @@
 /* View secondary */
 .title.title_view_secondary {
   .title__text {
-    background: $gradient;
-    background-clip: text;
-
     font-weight: 500;
-    -webkit-text-fill-color: transparent;
+    @extend %text-gradient;
   }
 }
 

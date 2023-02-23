@@ -1,9 +1,11 @@
 /* COLORS */
+
 /* Main color */
 $color_light: #fff;
 $color_dark: #000;
 $color_primary: #025fa7;
 $color_primary_light: rgba($color_primary, 0.3);
+
 // $color_primary_dark: darken($color_primary, 40%);
 $color_secondary: #ffd500;
 $color_passive: #f3f3f3;
@@ -34,10 +36,20 @@ $gradient_button: linear-gradient(
   #42e3ff 100%,
   #42e3ff 150%
 );
-/* TIME*/
+
+/* TIME */
 $th: 0.25s;
 
 /* Settings */
+
 /* Main */
 $background_main: $color_light;
 $font_color: $color_dark;
+
+/* Placeholder */
+%text-gradient {
+  background: $gradient;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
