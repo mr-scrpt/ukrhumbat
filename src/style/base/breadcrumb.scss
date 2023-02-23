@@ -10,39 +10,50 @@
 
   &__item {
     position: relative;
-    padding: 25px 20px 25px 0;
+
     display: flex;
     align-items: center;
+
+    padding: 25px 20px 25px 0;
+
     font-weight: 500;
 
-    &:after {
+    &::after {
       position: absolute;
-      // color: $color_passive_dark;
-      background-color: $color_passive_dark;
-      border-radius: 50%;
-      content: '';
+      top: 50%;
+      right: 10px;
+
       width: 5px;
       height: 5px;
-      right: 10px;
-      top: 50%;
+
+      content: '';
       transform: translate(50%, -50%);
+
+      border-radius: 50%;
+
+      // color: $color_passive_dark;
+      background-color: $color_passive_dark;
     }
+
     &:last-child {
-      &:after {
-        mask-image: none;
-        background-color: transparent;
+      &::after {
         display: none;
+
+        background-color: transparent;
+        mask-image: none;
       }
     }
   }
 
   &__link {
-    font-size: 12px;
-    line-height: 12px;
-    font-weight: 500;
     color: $color_passive_dark;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+
     &_active {
-      /*font-weight: 700;*/
+      /* font-weight: 700; */
       color: $color_primary;
     }
   }

@@ -8,4 +8,5 @@ export const data = {
   phone: JSON.parse(readFileSync(`${srcFolder}/data/phone.json`, 'utf8')),
   news: JSON.parse(readFileSync(`${srcFolder}/data/news.json`, 'utf8')),
   result: JSON.parse(readFileSync(`${srcFolder}/data/result.json`, 'utf8')),
+  support: JSON.parse(readFileSync(`${srcFolder}/data/support.json`, 'utf8')),
 }

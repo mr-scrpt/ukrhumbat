@@ -1,0 +1,38 @@
+<div class="support slider">
+    <div class="support__inner layout__row">
+        <div class="layout__row-box swiper slider__row">
+            <div class="swiper-wrapper support__wrapper">
+                {% for item in params.support_list %}
+                    <div class="support__item swiper-slide">
+                        <div class="support-item__inner">
+                            <div class="support-item__iconbox">
+                                <div class="support-item__icon icon icon_{{ item.icon }}"></div>
+                            </div>
+                            <div class="support-item__titlebox">
+                                <div class="support-item__title">{{ item.title }}</div>
+                            </div>
+                            <div class="support-item__textbox">
+                                <div class="support-item__text">{{ item.text }}</div>
+                            </div>
+                            <div class="support-item__linkbox">
+                                <div class="support-item__link">Читати повністю</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="slider__nav support__nav">
+            <div class="support__nav-prev">
+                <div class="arrow__item kit-pagination__arrow_prev">
+                    <div class="arrow__icon icon icon_arrow icon_arrow_r_180"></div>
+                </div>
+            </div>
+            <div class="support__nav-next">
+                <div class="arrow__item kit-pagination__arrow_next">
+                    <div class="arrow__icon icon icon_arrow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

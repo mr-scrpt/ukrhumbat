@@ -1,4 +1,4 @@
-.result {
+.support {
   &__inner {
   }
 
@@ -8,19 +8,19 @@
   }
 
   &__wrapper {
-    @include bp1440-block {
+    @include bp1100-block {
       justify-content: center;
       @include row-flex;
     }
   }
 
   // &__item {
-  //   @include bp1440-block {
+  //   @include bp1100-block {
   //     height: auto;
   //     margin-bottom: 30px;
   //     @include col;
   //   }
-  //   @include size-bp1440(4);
+  //   @include size-bp1100(4);
   // }
 
   &__nav {
@@ -33,18 +33,17 @@
 
     gap: 20px;
 
-    @include bp1440-block {
+    @include bp1100-block {
       display: none;
     }
   }
 }
 
-.result .result__item {
-  @include bp1440-block {
+.support .support__item {
+  @include bp1100-block {
     height: auto;
-
     margin-bottom: 30px;
     @include col;
   }
-  @include size-bp1440(3);
+  @include size-bp1100(6);
 }

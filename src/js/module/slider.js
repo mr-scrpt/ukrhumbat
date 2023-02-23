@@ -23,6 +23,17 @@ $(() => {
   // sliderGen('.result .swiper', optionsResult({ navNext, navPrev }))
 })
 
+// Support slider
+$(() => {
+  const [navNext] = $('.support__nav-next')
+  const [navPrev] = $('.support__nav-prev')
+
+  const bp = 1100
+  const options = optionSupport({ navNext, navPrev })
+  sliderCheckBrakepoint('.support .swiper', options, bp)
+  // sliderGen('.result .swiper', optionsResult({ navNext, navPrev }))
+})
+
 const sliderClassController = (
   $sliderElem,
   $sliderWrapper,
@@ -139,5 +150,41 @@ const optionsResult = ({ navNext, navPrev, pagination }) => ({
       slidesPerView: 4,
       centeredSlides: false,
     },
+  },
+})
+const optionSupport = ({ navNext, navPrev, pagination }) => ({
+  spaceBetween: 20,
+  // autoplay: true,
+  loop: true,
+  centeredSlides: false,
+  pagination: {
+    el: pagination || null,
+    clickable: true,
+  },
+  navigation: {
+    nextEl: navNext,
+    prevEl: navPrev,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.4,
+      centeredSlides: true,
+    },
+    520: {
+      slidesPerView: 2,
+      centeredSlides: true,
+    },
+    768: {
+      slidesPerView: 2,
+      centeredSlides: false,
+    },
+    994: {
+      slidesPerView: 3,
+      centeredSlides: false,
+    },
+    // 1100: {
+    //   slidesPerView: 4,
+    //   centeredSlides: false,
+    // },
   },
 })

@@ -27,6 +27,14 @@
       writing-mode: vertical-lr;
     }
 
+    &_rev {
+      &::before {
+        right: -15px;
+
+        left: auto;
+      }
+    }
+
     @include bp994-block {
       &::before {
         font-size: 125px;

@@ -14,23 +14,53 @@
     display: flex;
     justify-content: center;
 
-    padding: 36px 30px;
+    padding-top: 40px;
+
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 30px;
 
     text-align: center;
 
     border-bottom: 2px solid $color_light;
+    @include bp768-block {
+      padding-right: 15px;
+
+      padding-left: 15px;
+    }
+    @include bp1100-block {
+      padding-right: 50px;
+
+      padding-left: 50px;
+    }
   }
 
   &__title {
+    text-transform: uppercase;
+
     color: $color_light;
 
     font-size: 20px;
     font-weight: 500;
     line-height: 20px;
+    @include bp1100-block {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
   &__textbox {
     padding: 36px 30px;
+    @include bp768-block {
+      padding-right: 15px;
+
+      padding-left: 15px;
+    }
+    @include bp1100-block {
+      padding-right: 50px;
+
+      padding-left: 50px;
+    }
   }
 
   &__text {

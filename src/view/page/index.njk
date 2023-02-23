@@ -35,4 +35,16 @@
     })
     }}
     {# Result seciton END #}
+    {# Result seciton #}
+    {{ layout_base_section({
+    component: 'support',
+    titleText: 'напрямки підтримки',
+    layoutClass: 'layout__wrap deco__text-shadow deco__text-shadow_rev',
+    sectionClass: '',
+    sectionInnerClass:'',
+    sectionDecoText: 'Підтримка',
+    support_list: support.support_list
+    })
+    }}
+    {# Result seciton END #}
 {% endblock main %}
