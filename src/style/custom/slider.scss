@@ -19,6 +19,9 @@
     @include bp994-block {
       margin-bottom: 80px;
     }
+    @include bp1100-block {
+      margin-bottom: 0;
+    }
   }
 
   &__nav {

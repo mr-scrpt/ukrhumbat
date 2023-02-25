@@ -5,20 +5,16 @@
 
     height: 100%;
 
-    border-radius: 15px;
-
     background: $gradient;
+
+    @extend %border-radius;
   }
 
   &__titlebox {
     display: flex;
     justify-content: center;
 
-    padding-top: 40px;
-
-    padding-right: 30px;
-    padding-bottom: 40px;
-    padding-left: 30px;
+    padding: 40px 30px;
 
     text-align: center;
 

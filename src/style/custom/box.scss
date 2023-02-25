@@ -4,12 +4,11 @@
 
     padding: 40px;
 
-    border-radius: 15px;
-
     // background: $gradient;
     background-color: $color_passive;
 
     @extend %bs;
+    @extend %border-radius;
     @include bp1100-block {
       padding: 70px;
     }

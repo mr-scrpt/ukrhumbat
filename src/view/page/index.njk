@@ -7,8 +7,8 @@
     component: 'about',
     titleText: 'Про нас',
     layoutClass: 'layout__wrap',
-    sectionClass: 'deco__section-secondary',
-    sectionInnerClass:''
+    sectionClass: '',
+    sectionInnerClass:'deco__section-secondary'
     })
     }}
     {# About seciton END #}
@@ -68,4 +68,15 @@
     })
     }}
     {# Team seciton END #}
+    {# Contact seciton #}
+    {{ layout_base_section({
+    component: 'contact',
+    titleText: 'Контакти',
+    layoutClass: 'layout__wrap',
+    sectionClass: '',
+    sectionInnerClass:'deco__section-secondary',
+    contact_list: contact.contact_list
+    })
+    }}
+    {# Contact seciton END #}
 {% endblock main %}

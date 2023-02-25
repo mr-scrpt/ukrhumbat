@@ -30,7 +30,7 @@
 @import './base/radio';
 @import './base/link';
 @import './base/logo';
-@import './base/relative-box';
+@import './base/relative';
 @import './base/text';
 @import './base/textarea';
 @import './base/title';
@@ -54,9 +54,12 @@
 @import './custom/support-item';
 @import './custom/donat';
 @import './custom/donat-item';
-
 @import './custom/team';
 @import './custom/team-item';
+
+@import './custom/contact';
+@import './custom/contact-item';
+@import './custom/map';
 
 * {
   box-sizing: border-box;
