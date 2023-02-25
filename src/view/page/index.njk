@@ -56,4 +56,16 @@
     })
     }}
     {# Donat seciton END #}
+    {# Team seciton #}
+    {{ layout_base_section({
+    component: 'team',
+    titleText: 'Команда',
+    layoutClass: 'layout__wrap deco__text-shadow',
+    sectionClass: '',
+    sectionInnerClass:'',
+    sectionDecoText: 'Команда',
+    team_list: team.team_list
+    })
+    }}
+    {# Team seciton END #}
 {% endblock main %}

@@ -1,4 +1,4 @@
-.support {
+.team {
   &__inner {
   }
 
@@ -14,14 +14,18 @@
     }
   }
 
-  // &__item {
-  //   @include bp1100-block {
-  //     height: auto;
-  //     margin-bottom: 30px;
-  //     @include col;
-  //   }
-  //   @include size-bp1100(4);
-  // }
+  &__item {
+    margin-bottom: 90px;
+    @include bp1100-block {
+      height: auto;
+
+      padding-left: 120px;
+
+      // margin-bottom: 30px;
+      @include col;
+    }
+    @include size-bp1100(6);
+  }
 
   &__nav {
     position: relative;
@@ -39,11 +43,21 @@
   }
 }
 
-.support .swiper-slide {
+.team .swiper-slide {
+  height: auto;
   @include bp1100-block {
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 140px;
     @include col;
   }
   @include size-bp1100(6);
 }
+
+// .team .team__item {
+//   @include bp1100-block {
+//     height: auto;
+//     margin-bottom: 30px;
+//     @include col;
+//   }
+//   @include size-bp1100(6);
+// }

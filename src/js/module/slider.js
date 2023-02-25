@@ -34,6 +34,17 @@ $(() => {
   // sliderGen('.result .swiper', optionsResult({ navNext, navPrev }))
 })
 
+// Support slider
+$(() => {
+  const [navNext] = $('.team__nav-next')
+  const [navPrev] = $('.team__nav-prev')
+
+  const bp = 1100
+  const options = optionSupport({ navNext, navPrev })
+  sliderCheckBrakepoint('.team .swiper', options, bp)
+  // sliderGen('.result .swiper', optionsResult({ navNext, navPrev }))
+})
+
 const sliderClassController = (
   $sliderElem,
   $sliderWrapper,

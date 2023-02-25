@@ -1,52 +1,17 @@
 .box {
-  &__girdbox {
-    @include row-flex;
-  }
+  &__inner {
+    overflow: hidden;
 
-  &__girdcol {
-    background-color: yellow;
-    @include col;
-    @include size(1);
-  }
+    padding: 40px;
 
-  &__girdbox2 {
-    justify-content: center;
-    @include row-flex;
-  }
+    border-radius: 15px;
 
-  &__girdcol2 {
-    background-color: yellow;
-    @include col;
-    @include size(1);
-  }
+    // background: $gradient;
+    background-color: $color_passive;
 
-  &__girdbox3 {
-    justify-content: center;
-    @include row-flex;
-  }
-
-  &__girdcol3 {
-    background-color: yellow;
-    @include col;
-    @include size(8);
-  }
-
-  &__girdbox4 {
-    justify-content: center;
-    @include row-flex;
-  }
-
-  &__girdcol4 {
-    background-color: yellow;
-    @include col;
-    @include size(5);
-  }
-
-  &__text {
-    background-color: blue;
-
-    // @include shift(1);
-    // @include col;
-    // @include size(8);
+    @extend %bs;
+    @include bp1100-block {
+      padding: 70px;
+    }
   }
 }

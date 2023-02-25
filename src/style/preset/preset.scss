@@ -53,3 +53,8 @@ $font_color: $color_dark;
 
   -webkit-text-fill-color: transparent;
 }
+
+%bs {
+  // box-shadow: 0 4px 15px rgba($color_passive, 8%);
+  box-shadow: 0 4px 15px rgb(2 95 167 / 8%);
+}

@@ -15,14 +15,7 @@
             <div class="swiper slider__row">
                 <div class="swiper-wrapper">
                     {% for item in params.news_list %}
-                        <div class="news__item swiper-slide">
-                            <div class="news__item-imgbox">
-                                <img src="/img/regular/content/news/news-item_{{ loop.index }}.jpg"
-                                     alt=""
-                                     class="news__item-img img">
-                            </div>
-                            <div class="news__item-title">{{ item.title }}</div>
-                        </div>
+                        {% include 'component/news/news-item.njk' %}
                     {% endfor %}
                 </div>
             </div>

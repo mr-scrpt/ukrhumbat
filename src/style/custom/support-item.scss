@@ -4,11 +4,6 @@
     flex-direction: column;
 
     height: 100%;
-
-    border-radius: 15px;
-
-    // background: $gradient;
-    background-color: $color_passive;
   }
 
   &__iconbox {
@@ -16,12 +11,7 @@
     align-items: center;
     justify-content: center;
 
-    padding-top: 40px;
     padding-bottom: 30px;
-
-    @include bp1100-block {
-      padding-top: 70px;
-    }
   }
 
   &__icon {
@@ -33,21 +23,12 @@
     display: flex;
     justify-content: center;
 
-    padding-right: 30px;
     padding-bottom: 40px;
-    padding-left: 30px;
 
     text-align: center;
+
     @include bp768-block {
-      padding-right: 15px;
       padding-bottom: 60px;
-
-      padding-left: 15px;
-    }
-    @include bp1100-block {
-      padding-right: 50px;
-
-      padding-left: 50px;
     }
   }
 
@@ -64,19 +45,7 @@
   }
 
   &__textbox {
-    padding-right: 30px;
     padding-bottom: 30px;
-    padding-left: 30px;
-    @include bp768-block {
-      padding-right: 45px;
-
-      padding-left: 45px;
-    }
-    @include bp1100-block {
-      padding-right: 50px;
-
-      padding-left: 50px;
-    }
   }
 
   &__text {
@@ -93,28 +62,9 @@
 
     margin-bottom: 0;
 
-    padding-right: 30px;
-    padding-bottom: 40px;
-    padding-left: 30px;
-
     color: $color_primary;
 
     font-size: 14px;
     font-weight: 600;
-    @include bp768-block {
-      padding-right: 45px;
-
-      padding-left: 45px;
-    }
-    @include bp1100-block {
-      padding-right: 50px;
-      padding-bottom: 70px;
-
-      padding-left: 50px;
-    }
   }
 }
-
-// .swiper-slide {
-//   height: auto;
-// }
