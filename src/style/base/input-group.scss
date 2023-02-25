@@ -7,7 +7,20 @@
   &__title {
     display: flex;
     align-items: center;
+
+    margin-bottom: 10px;
+
+    padding-left: 15px;
   }
+
+  &__text {
+    @include bp994-block {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+
   &__box {
     flex-grow: 1;
   }
@@ -15,15 +28,18 @@
 
 .input-group.input-group_type_split {
   background-color: red;
+
   .input-group__inner {
     flex-wrap: nowrap;
     gap: 15px;
   }
 }
+
 .input-group.input-group_type_nosplit {
   .input-group__title {
     width: 100%;
   }
+
   .input-group__box {
     width: 100%;
   }

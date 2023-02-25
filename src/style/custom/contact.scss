@@ -6,16 +6,18 @@
   //   justify-content: center;
   // }
 
-  // &__box{
-  //   @include col;
-  //   @include size
-  // }
+  &__box {
+    margin-bottom: 40px;
+  }
 
   &__list {
     display: flex;
-    gap: 15px;
 
     flex-wrap: wrap;
+
+    padding-right: 15px;
+    padding-left: 15px;
+    gap: 15px;
 
     @include bp994-block {
       // position: absolute;
@@ -23,6 +25,8 @@
       // left: 50%;
 
       display: flex;
+
+      flex-wrap: nowrap;
 
       // width: calc(100% + 30px);
 
@@ -40,7 +44,12 @@
     width: 100%;
     @include bp994-block {
       // width: 33.3333%;
+
       flex-grow: 1;
+
+      // width: 1fr;
+
+      // width: auto;
 
       // width: calc(33.3333% - 30px);
       height: auto;

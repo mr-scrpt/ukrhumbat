@@ -1,0 +1,38 @@
+{# {% macro form_contact(params) -%} #}
+{%- from "component/input-group/input-group-macro.njk" import input_group_macro -%}
+<div class="form-contact {{ params.parentClass }} layout__row">
+    <div class="form-contact__inner layout__row-box">
+        <div class="form-contact__imgbox">
+            <img src="/img/regular/content/contact/contact-main.jpg"
+                 alt=""
+                 class="img form-contact__img">
+        </div>
+        <div class="form-contact__formbox box">
+            <div class="box__inner form-contact__content">
+                <div class="form-contact__title">Зв'яжіться з нами</div>
+                <div class="form-contact__titlesub">Форма зворотнього зв'язку</div>
+                <div class="form-contact__row">
+                    {{input_group_macro({
+                    split: 'nosplit',
+                    title: 'Імʼя',
+                    inputTheme: 'primary',
+                    inputSize: 'l',
+                    inputOther: 'input_width_available'
+                    })
+                    }}
+                </div>
+                <div class="form-contact__row">
+                    {{input_group_macro({
+                    split: 'nosplit',
+                    title: 'Email',
+                    inputTheme: 'primary',
+                    inputSize: 'l',
+                    inputOther: 'input_width_available'
+                    })
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{# {%- endmacro %} #}

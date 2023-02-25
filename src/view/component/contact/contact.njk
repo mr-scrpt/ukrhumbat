@@ -24,5 +24,8 @@
                 {% endfor %}
             </div>
         </div>
+        {% include 'component/form-contact/form-contact-macro.njk' %}
+        {# {%- from "component/form-contact/form-contact-macro.njk" import form_contact -%} #}
+        {# {{ form_contact({})}} #}
     </div>
 </div>
