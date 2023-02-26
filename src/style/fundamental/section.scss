@@ -23,3 +23,21 @@
     }
   }
 }
+
+.section .section__inner {
+  &.section__inner_only_top {
+    padding-bottom: 0;
+
+    @include bp994-block {
+      padding-bottom: 0;
+    }
+  }
+
+  &.section__inner_only_bottom {
+    padding-top: 0;
+
+    @include bp994-block {
+      padding-top: 0;
+    }
+  }
+}
