@@ -40,6 +40,11 @@
     margin-bottom: 30px;
   }
 
+  &__buttonbox {
+    display: flex;
+    justify-content: center;
+  }
+
   &__title {
     margin-bottom: 20px;
 

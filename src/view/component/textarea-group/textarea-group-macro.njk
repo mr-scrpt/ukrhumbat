@@ -1,15 +1,11 @@
-{% macro input_group_macro(params) -%}
+{% macro textarea_group_macro(params) -%}
     <label class="input-group input-group_type_{{ params.split }}">
         <div class="input-group__inner">
             <div class="input-group__title">
                 <span for="" class="input-group__text">{{ params.title }}</span>
             </div>
             <div class="input-group__box">
-                <span class="input {{ params.theme }} {{ params.size }} {{ params.other }}">
-                    <span class="input__box">
-                        <input class="input__control">
-                    </span>
-                </span>
+                <textarea class="textarea {{params.theme}} {{params.size}} {{params.other}}"></textarea>
             </div>
         </div>
     </label>

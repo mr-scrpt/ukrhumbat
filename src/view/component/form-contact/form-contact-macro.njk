@@ -1,7 +1,8 @@
 {# {% macro form_contact(params) -%} #}
 {%- from "component/input-group/input-group-macro.njk" import input_group_macro -%}
+{%- from "component/textarea-group/textarea-group-macro.njk" import textarea_group_macro -%}
 <div class="form-contact {{ params.parentClass }} layout__row">
-    <div class="form-contact__inner layout__row-box">
+    <form class="form-contact__inner layout__row-box">
         <div class="form-contact__imgbox">
             <img src="/img/regular/content/contact/contact-main.jpg"
                  alt=""
@@ -15,9 +16,9 @@
                     {{input_group_macro({
                     split: 'nosplit',
                     title: 'Імʼя',
-                    inputTheme: 'primary',
-                    inputSize: 'l',
-                    inputOther: 'input_width_available'
+                    theme: 'input_view_primary',
+                    size: 'input_size_l',
+                    other: 'input_width_available'
                     })
                     }}
                 </div>
@@ -25,14 +26,29 @@
                     {{input_group_macro({
                     split: 'nosplit',
                     title: 'Email',
-                    inputTheme: 'primary',
-                    inputSize: 'l',
-                    inputOther: 'input_width_available'
+                    theme: 'input_view_primary',
+                    size: 'input_size_l',
+                    other: 'input_width_available'
                     })
                     }}
                 </div>
+                <div class="form-contact__row">
+                    {{textarea_group_macro({
+                    split: 'nosplit',
+                    title: 'Email',
+                    theme: 'textarea_view_primary',
+                    size: 'textarea_size_l',
+                    other: 'textarea_width_available'
+                    })
+                    }}
+                </div>
+                <div class="form-contact__row form-contact__buttonbox">
+                    <button class="button button_view_primary button_size_l">
+                        <div class="button__text">Надіслати</div>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 </div>
 {# {%- endmacro %} #}
