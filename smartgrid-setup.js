@@ -22,6 +22,9 @@ const settings = {
     bp768: {
       width: '768px',
     },
+    bp640: {
+      width: '640px',
+    },
     bp480: {
       width: '480px',
     },

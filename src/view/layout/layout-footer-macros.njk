@@ -1,0 +1,10 @@
+{% macro layout_base_footer(params) -%}
+    <footer class="section layout__section {{ params.sectionClass }}">
+        <div class="section__inner {{ params.sectionInnerClass }}">
+            <div class="{{ params.layoutClass }}"
+                 data-text="{{ params.sectionDecoText }}">
+                {% include "component/" + params.component + "/" + params.component + ".njk" ignore missing %}
+            </div>
+        </div>
+    </footer>
+{%- endmacro %}

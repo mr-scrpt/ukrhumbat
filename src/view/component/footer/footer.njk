@@ -1,14 +1,16 @@
-<footer class="footer page__footer">
-  <div class="footer__inner layout__wrap">
-    <div class="footer__text">
-
-      Copyright © 2021 is owned and operated by N1 Interactive Ltd, a company
-      incorporated under the laws of Malta with registration number and
-      registered address at 206, Wisely House, Old Bakery Street, Valletta
-      VLT1451, Malta. is licensed and regulated by the Malta Gaming Authority
-      under the licences: MGA/B2C/394/2017 (issued on 01/08/2018). Gambling can
-      be addictive. Play responsibly. Wildfortune casino accepts players only
-      over 18 years of age.
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__logobox logo logo_view_secondary">
+            <img src="/img/regular/logo/logo_view_secondary.svg"
+                 alt=""
+                 class="footer__logo img logo__img">
+        </div>
+        <div class="footer__row footer__row_alt">
+            {% include 'component/footer/footer-menu.njk' %}
+            {% include 'component/footer/footer-contact.njk' %}
+            {% include 'component/footer/footer-social.njk' %}
+            {% include 'component/footer/footer-text.njk' %}
+        </div>
+        <div class="footer__row">{% include 'component/footer/footer-copyright.njk' %}</div>
     </div>
-  </div>
 </footer>

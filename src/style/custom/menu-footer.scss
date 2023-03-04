@@ -1,0 +1,15 @@
+.menu-footer {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__link {
+    color: $color_light;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="footer__cell footer-item">
+    <div class="footer-item__inner">
+        <div class="footer-item__titlebox">
+            <div class="footer-item__title">Соціальні мережі</div>
+        </div>
+        <div class="footer-item__body">
+            <nav class="footer-item__short-box">
+                {% for item in params.contact_list %}
+                    {% if item.name === 'social' %}
+                        {% for social in item.data.body %}
+                            <div class="footer-item__short-item">
+                                <div class="footer-item__short-iconbox">
+                                    <div class="footer-item__short-icon icon icon_{{ social.icon }} icon_{{ social.icon }}_pale"></div>
+                                </div>
+                                <div class="footer-item__short-list">
+                                    <div class="footer-item__short-item-text">{{ social.name }}</div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </nav>
+        </div>
+    </div>
+</div>

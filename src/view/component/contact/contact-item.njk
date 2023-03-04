@@ -1,8 +1,17 @@
 <div class="contact__item contact-item box">
     <div class="contact-item__inner box__inner">
-        <div class="contact-item__title">{{ item.title }}</div>
+        <div class="contact-item__title">{{ item.data.title }}</div>
         <div class="contact-item__body">
-            {% for subitem in item.body %}<div class="contact-item__body-row">{{ subitem }}</div>{% endfor %}
+            {% if item.name === 'address' %}
+                <div class="contact-item__body-row">
+                    м. {{ item.data.body.city }},
+                    вул.{{ item.data.body.street }},
+                    буд. {{ item.data.body.build }},
+                    оф. {{ item.data.body.room }}
+                </div>
+            {% else %}
+                {% for subitem in item.data.body %}<div class="contact-item__body-row">{{ subitem }}</div>{% endfor %}
+            {% endif %}
         </div>
     </div>
 </div>

@@ -1,6 +1,37 @@
 .deco {
-  &__section-secondary {
+  &__bg-alt {
     background-color: $color_passive;
+  }
+
+  &__bg-gradient {
+    background: $gradient;
+  }
+
+  &__bg-gradient-v {
+    background: $gradient_vertical;
+  }
+
+  &__line {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      width: 40%;
+      height: 2px;
+
+      content: '';
+
+      transform: translateX(-50%);
+
+      background-color: $color_light;
+
+      @include bp994-block {
+        width: 80%;
+      }
+    }
   }
 
   &__text-shadow {
@@ -47,8 +78,5 @@
         line-height: 165px;
       }
     }
-  }
-
-  &__sh {
   }
 }

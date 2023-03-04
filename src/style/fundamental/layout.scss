@@ -27,6 +27,12 @@
   }
 
   &__section {
+    position: relative;
+
     overflow: hidden;
+
+    &_free {
+      overflow: visible;
+    }
   }
 }

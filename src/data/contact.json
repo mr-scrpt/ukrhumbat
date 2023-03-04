@@ -1,23 +1,49 @@
 {
   "contact_list": [
     {
-      "title": "Графік роботи",
-      "body": [
-        "Пн-Пт - 09:00-16:00"
-      ]
+      "name": "schedule",
+      "data": {
+        "title": "Графік роботи",
+        "body": ["Пн-Пт - 09:00-16:00"]
+      }
     },
     {
-      "title": "Контактні телефони",
-      "body": [
-        "+380 (63)-049-40-02",
-        "+380 (67)-159-73-73"
-      ]
+      "name": "phone",
+      "data": {
+        "title": "Контактні телефони",
+        "body": ["+380 (63)-049-40-02", "+380 (67)-159-73-73"]
+      }
     },
     {
-      "title": "Адреса:",
-      "body": [
-        "вул. Сумська 0, м. Харків"
-      ]
+      "name": "address",
+      "data": {
+        "title": "Адреса:",
+        "body": {
+          "index": "61145",
+          "city": "Харків",
+          "street": "Космічна",
+          "build": "21",
+          "room": "529"
+        }
+      }
+    },
+    {
+      "name": "social",
+      "data": {
+        "title": "Соціальні мережі:",
+        "body": [
+          {
+            "icon": "fb",
+            "name": "facebook",
+            "link": "//facebook.com/"
+          },
+          {
+            "icon": "insta",
+            "name": "instagram",
+            "link": "//instagram.com/ukrhumbat?igshid=NTdlMDg3MTY="
+          }
+        ]
+      }
     }
   ]
 }

@@ -1,6 +1,7 @@
 {% set inject = { layoutClass: "page page_theme layout deco"} %}
 {% extends "layout/layout.njk" %}
 {%- from "layout/layout-section-macros.njk" import layout_base_section -%}
+{%- from "layout/layout-footer-macros.njk" import layout_base_footer -%}
 {% block main %}
     {#  About seciton #}
     {{ layout_base_section({
@@ -8,7 +9,7 @@
     titleText: 'Про нас',
     layoutClass: 'layout__wrap',
     sectionClass: '',
-    sectionInnerClass:'deco__section-secondary'
+    sectionInnerClass:'deco__bg-alt'
     })
     }}
     {# About seciton END #}
@@ -30,7 +31,7 @@
     titleText: 'Наши результаты',
     layoutClass: 'layout__wrap',
     sectionClass: '',
-    sectionInnerClass:'deco__section-secondary',
+    sectionInnerClass:'deco__bg-alt',
     result_list: result.result_list
     })
     }}
@@ -52,7 +53,7 @@
     component: 'donat',
     layoutClass: 'layout__wrap',
     sectionClass: '',
-    sectionInnerClass:'deco__section-secondary'
+    sectionInnerClass:'deco__bg-alt'
     })
     }}
     {# Donat seciton END #}
@@ -74,7 +75,7 @@
     titleText: 'Контакти',
     layoutClass: 'layout__wrap',
     sectionClass: '',
-    sectionInnerClass:'deco__section-secondary',
+    sectionInnerClass:'deco__bg-alt',
     contact_list: contact.contact_list
     })
     }}
@@ -83,9 +84,20 @@
     {{ layout_base_section({
     component: 'form-contact',
     layoutClass: 'layout__wrap',
-    sectionClass: '',
-    sectionInnerClass:'section__inner_only_bottom deco__section-secondary'
+    sectionClass: 'layout__section_free',
+    sectionInnerClass:'section__inner_only_bottom section__inner_last deco__bg-alt'
     })
     }}
     {# Form contact seciton END #}
+    {# Footer contact seciton #}
+    {{ layout_base_footer({
+    component: 'footer',
+    layoutClass: 'layout__wrap',
+    sectionClass: 'layout__section_free',
+    sectionInnerClass:'deco__bg-gradient-v section__inner_footer',
+    menu_list: menu.menu_list,
+    contact_list: contact.contact_list
+    })
+    }}
+    {# Footer contact seciton END #}
 {% endblock main %}
