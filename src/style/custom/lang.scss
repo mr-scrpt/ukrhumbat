@@ -1,0 +1,44 @@
+.lang {
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    // flex-wrap: wrap;
+    justify-content: center;
+
+    height: 100%;
+
+    background-color: $color_primary;
+
+    @include bp1100-block {
+      padding: 0 15px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    text-decoration: none;
+
+    color: $color_light;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+
+    // &_active {
+    //   color: $color_secondary;
+    // }
+  }
+}
+
+.lang .lang__item.lang__item_active {
+  .lang__text {
+    color: $color_secondary;
+  }
+}

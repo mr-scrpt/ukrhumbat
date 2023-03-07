@@ -6,7 +6,7 @@ const settings = {
   offset: '30px' /* gutter width px || % || rem */,
   mobileFirst: true /* mobileFirst ? 'min-width' : 'max-width' */,
   container: {
-    maxWidth: '1470px' /* max-width оn very large screen */,
+    maxWidth: '1440px' /* max-width оn very large screen */,
     fields: '15px' /* side fields */,
   },
   breakPoints: {

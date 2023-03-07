@@ -1,0 +1,13 @@
+{% macro logo_macro(params) -%}
+    <div class="logo {{ params.parentClass }}">
+        <a href="/" class="logo__inner">
+            {% if inject.logoText %}
+                <div class="logo__tex">{{ params.logoText }}</div>
+            {% else %}
+                <img class="logo__img img"
+                     src="./img/regular/logo/{{ params.logo }}"
+                     alt="logo"/>
+            {% endif %}
+        </a>
+    </div>
+{%- endmacro %}

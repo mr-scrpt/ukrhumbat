@@ -52,6 +52,16 @@
     }
   }
 
+  &.section__inner_header {
+    padding-top: 0;
+    padding-bottom: 0;
+    @include bp994-block {
+      padding-top: 0;
+      padding-bottom: 0;
+
+    }
+  }
+
   &.section__inner_footer {
     padding-top: 125px;
     padding-bottom: 0;

@@ -1,0 +1,25 @@
+<div class="menu adaptive header__menu">
+    <div class="menu__inner">
+        <div class="menu__controller adaptive__controller burger">
+            <div class="burger__inner">
+                <div class="icon icon_burger burger__icon"></div>
+            </div>
+        </div>
+        <div class="menu__body">
+            <div class="menu__box adaptive__box">
+                <div class="menu__close adaptive__controller close">
+                    <div class="close__inner">
+                        <div class="icon icon_cross close__icon"></div>
+                    </div>
+                </div>
+                <div class="menu__list">
+                    {% for item in params.menu_list %}
+                        <div class="menu__item">
+                            <a class="menu__link menu__link_connect link to" href="#{{ item.href }}">{{ item.name }}</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

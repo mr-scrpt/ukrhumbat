@@ -39,6 +39,7 @@
 @import './base/arrow';
 @import './base/pagination';
 @import './base/breadcrumb';
+@import './base/adaptive';
 
 /* Навигация */
 
@@ -65,6 +66,8 @@
 
 @import './custom/menu-footer';
 @import './custom/copyright';
+@import './custom/menu';
+@import './custom/lang';
 
 * {
   box-sizing: border-box;

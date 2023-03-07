@@ -2,12 +2,52 @@
   &__inner {
     display: flex;
     flex-wrap: wrap;
+    @include bp994-block {
+      flex-wrap: nowrap;
+
+      max-width: 1440px;
+      margin: 0 auto;
+
+      // @extend %bs;
+      box-shadow: 0 4px 15px rgb(2 95 167 / 8%);
+    }
   }
 
   &__logo {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @extend %bs;
+    @include bp994-block {
+      width: auto;
+      padding-left: 15px;
+
+      box-shadow: none;
+    }
   }
+
+  &__cell {
+    display: flex;
+
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    @include bp994-block {
+      flex-grow: 1;
+
+      width: auto;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
   &__menu {
     width: 100%;
-    background-color: yellow;
+  }
+
+  &__lang {
+    margin-right: 0;
+    margin-left: auto;
   }
 }

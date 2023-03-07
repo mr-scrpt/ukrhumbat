@@ -1,6 +1,13 @@
+{%- from "component/logo/logo-macro.njk" import logo_macro -%}
 <div class="header">
     <div class="header__inner">
-        <div class="header__logo">{% include "component/logo/logo.njk" %}</div>
-
+        {{logo_macro({
+        parentClass: 'header__logo logo_view_primary',
+        logo: 'logo_view_primary.svg'
+        })}}
+        <div class="header__cell">
+            {% include 'component/menu/menu.njk' %}
+            {% include 'component/lang/lang.njk' %}
+        </div>
     </div>
 </div>

@@ -26,6 +26,10 @@
     @include size-bp994(10);
   }
 
+  &__flat {
+    width: 100%;
+  }
+
   &__section {
     position: relative;
 

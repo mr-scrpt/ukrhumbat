@@ -1,10 +1,15 @@
+{%- from "component/logo/logo-macro.njk" import logo_macro -%}
 <footer class="footer">
     <div class="footer__inner">
-        <div class="footer__logobox logo logo_view_secondary">
-            <img src="/img/regular/logo/logo_view_secondary.svg"
-                 alt=""
-                 class="footer__logo img logo__img">
-        </div>
+        {{logo_macro({
+        parentClass: 'footer__logobox logo logo_view_secondary',
+        logo: 'logo_view_secondary.svg'
+        })}}
+        {# <div class="footer__logobox logo logo_view_secondary"> #}
+        {#     <img src="/img/regular/logo/logo_view_secondary.svg" #}
+        {#          alt="" #}
+        {#          class="footer__logo img logo__img"> #}
+        {# </div> #}
         <div class="footer__row footer__row_alt">
             {% include 'component/footer/footer-menu.njk' %}
             {% include 'component/footer/footer-contact.njk' %}
