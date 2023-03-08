@@ -20,7 +20,9 @@
             </div>
             <div class="contact__list">
                 {% for item in params.contact_list %}
-                    {% include 'component/contact/contact-item.njk' %}
+                    {% if item.name !== 'social' %}
+                        {% include 'component/contact/contact-item.njk' %}
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
