@@ -52,13 +52,12 @@
     }
   }
 
-  &.section__inner_header {
+  &.section__inner_reset {
     padding-top: 0;
     padding-bottom: 0;
     @include bp994-block {
       padding-top: 0;
       padding-bottom: 0;
-
     }
   }
 

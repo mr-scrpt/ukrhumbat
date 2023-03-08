@@ -8,19 +8,29 @@
     {{ layout_base_header({
     component: 'header',
     layoutClass: 'layout__flat',
-    sectionClass: '',
-    sectionInnerClass:'section__inner_header',
+    sectionClass: 'layout__section_free',
+    sectionInnerClass:'section__inner_reset',
     menu_list: menu.menu_list
     })
     }}
     {# Header contact seciton END #}
+    {# Hero seciton #}
+    {{ layout_base_section({
+    component: 'hero',
+    layoutClass: 'layout__flat',
+    sectionClass: '',
+    sectionInnerClass:'section__inner_reset',
+    contact_list: contact.contact_list
+    })
+    }}
+    {# Hero seciton END #}
     {#  About seciton #}
     {{ layout_base_section({
     component: 'about',
     titleText: 'Про нас',
     layoutClass: 'layout__wrap',
     sectionClass: '',
-    sectionInnerClass:'deco__bg-alt'
+    sectionInnerClass:'deco__bg_alt'
     })
     }}
     {# About seciton END #}
@@ -42,7 +52,7 @@
     titleText: 'Наши результаты',
     layoutClass: 'layout__wrap',
     sectionClass: '',
-    sectionInnerClass:'deco__bg-alt',
+    sectionInnerClass:'deco__bg_alt',
     result_list: result.result_list
     })
     }}
@@ -64,7 +74,7 @@
     component: 'donat',
     layoutClass: 'layout__wrap',
     sectionClass: '',
-    sectionInnerClass:'deco__bg-alt'
+    sectionInnerClass:'deco__bg_alt'
     })
     }}
     {# Donat seciton END #}
@@ -86,7 +96,7 @@
     titleText: 'Контакти',
     layoutClass: 'layout__wrap',
     sectionClass: '',
-    sectionInnerClass:'deco__bg-alt',
+    sectionInnerClass:'deco__bg_alt',
     contact_list: contact.contact_list
     })
     }}
@@ -96,7 +106,7 @@
     component: 'form-contact',
     layoutClass: 'layout__wrap',
     sectionClass: 'layout__section_free',
-    sectionInnerClass:'section__inner_only_bottom section__inner_last deco__bg-alt'
+    sectionInnerClass:'section__inner_only_bottom section__inner_last deco__bg_alt'
     })
     }}
     {# Form contact seciton END #}
@@ -105,7 +115,7 @@
     component: 'footer',
     layoutClass: 'layout__wrap',
     sectionClass: 'layout__section_free',
-    sectionInnerClass:'deco__bg-gradient-v section__inner_footer',
+    sectionInnerClass:'deco__bg_gradient_v section__inner_footer',
     menu_list: menu.menu_list,
     contact_list: contact.contact_list
     })

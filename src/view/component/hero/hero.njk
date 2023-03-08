@@ -1,0 +1,48 @@
+<div class="hero">
+    <div class="hero__inner layout__wrap">
+        <div class="hero__imgbox">
+            <img src="/img/regular/hero/hero_map.png"
+                 alt="Ukraine hero"
+                 title="Ukraine hero"
+                 class="img hero__img">
+        </div>
+        <div class="hero__textbox text">
+            <span class="text__title title title_size_xxl title_view_secondary">
+                <span class="title__text">
+                    <span class="text__braker">Дуже важлива</span>
+                    <span class="text__braker">справа у дуже</span>
+                    <span class="text__braker">нелегкий час</span>
+                </span>
+            </span>
+            <p class="text__item">
+                Робота фонду будується на простих людських цінностях, які спрямовані на підтримку та розвиток відкритого українського суспільства, та інвестицій в майбутнє України. Засновники Фонду - це звичайні підприємці та волонтери з міста Запоріжжя, небайдужі до чужої біди, проблем суспільства та Держави.
+            </p>
+            <div class="hero__buttonbox">
+                <a href="#"
+                   class="button button_view_primary button_size_l button_type_link">
+                    <div class="button__text">О проекте</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hero__linebox deco__line_gradient">
+        <div class="contact layout__wrap">
+            <div class="contact__cellbox">
+                <div class="contact__cell hero__social">
+                    <div class="contact__cell-text">Ми в соціальних мережах</div>
+                    <div class="contact__social-list">
+                        {% for item in params.contact_list %}
+                            {% if item.name === 'social' %}
+                                {% for social in item.data.body %}
+                                    <div class="contact__cell-iconbox">
+                                        <a href="#" class="contact__cell-icon icon icon_{{ social.icon }}"></a>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -52,9 +52,9 @@
   }
 }
 
-/* Size S END */
+/* Size M END */
 
-/* Size S */
+/* Size L */
 .title.title_size_l {
   .title__text {
     font-size: 24px;
@@ -64,7 +64,7 @@
 
 /* Size S END */
 
-/* Size S */
+/* Size XL */
 .title.title_size_xl {
   .title__text {
     font-size: 32px;
@@ -79,6 +79,29 @@
   }
 }
 
-/* Size S END */
+/* Size XL END */
+
+/* Size XXL */
+.title.title_size_xxl {
+  .title__text {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  @include bp994-block {
+    .title__text {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  @include bp1440-block {
+    .title__text {
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+}
+
+/* Size XXL END */
 
 /* Size END */

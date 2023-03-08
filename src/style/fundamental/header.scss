@@ -9,7 +9,10 @@
       margin: 0 auto;
 
       // @extend %bs;
-      box-shadow: 0 4px 15px rgb(2 95 167 / 8%);
+      // box-shadow: 0 4px 15px rgb(2 95 167 / 75%);
+
+      // box-shadow: 0 4px 16px 0 rgb(0 0 0 / 75%);
+      box-shadow: 0 4px 15px rgb(2 95 167 / 15%);
     }
   }
 
@@ -49,5 +52,9 @@
   &__lang {
     margin-right: 0;
     margin-left: auto;
+
+    @include bp994-block {
+      margin-right: 15px;
+    }
   }
 }

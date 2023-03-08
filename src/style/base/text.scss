@@ -16,6 +16,8 @@
   // }
 
   &__item {
+    display: inline-block;
+
     margin-bottom: 20px;
 
     font-size: 14px;
@@ -55,5 +57,12 @@
 
   &__b_l {
     font-weight: 500;
+  }
+
+  &__braker {
+    display: inline;
+    @include bp994-block {
+      display: block;
+    }
   }
 }

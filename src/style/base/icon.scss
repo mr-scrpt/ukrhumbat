@@ -14,6 +14,8 @@
   mask-repeat: no-repeat;
   mask-position: 50%;
   mask-size: contain;
+
+  @include ts(background-color);
 }
 
 .icon:empty::after {
@@ -44,7 +46,7 @@
 .icon.icon_fb {
   mask-image: url('/img/regular/icon/icon_fb.svg');
 
-  background-color: blue;
+  background-color: $color_primary;
 
   &_pale {
     background-color: #fff;
@@ -58,7 +60,7 @@
 .icon.icon_insta {
   mask-image: url('/img/regular/icon/icon_insta.svg');
 
-  background-color: blue;
+  background-color: $color_primary;
 
   &_pale {
     background-color: #fff;

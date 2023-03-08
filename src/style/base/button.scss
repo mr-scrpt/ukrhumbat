@@ -1,10 +1,12 @@
 .button {
   position: relative;
 
+  display: inline-flex;
+
   align-items: center;
 
   justify-content: center;
-  display: inline-flex;
+
   margin: 0;
   padding: 0;
 
@@ -29,12 +31,14 @@
     cursor: pointer;
   }
 }
+
 /* Модификаторы */
 .button_width_available {
   width: 100%;
 }
 
 /* Модификаторы КОНЕЦ */
+
 /* View */
 .button.button_view_primary {
   background: $gradient;
@@ -43,9 +47,10 @@
   background-size: 150%;
 
   & .button__text {
-    text-transform: uppercase;
-    color: white;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: white;
   }
 
   &:hover {
@@ -55,13 +60,14 @@
 }
 
 .button.button_view_secondary {
+  border: 1px solid transparent;
   background: $color_light;
 
-  border: 1px solid transparent;
   & .button__text {
-    text-transform: uppercase;
-    color: $color_primary;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: $color_primary;
   }
 
   &:hover {
@@ -81,8 +87,8 @@
   border-radius: 60px;
 
   font-size: 14px;
-  line-height: 50px;
   font-weight: 500;
+  line-height: 50px;
 }
 
 .button_size_l .button__text {
