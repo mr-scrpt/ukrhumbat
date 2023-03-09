@@ -1,0 +1,20 @@
+<div class="news-item news__item">
+    <div class="news-item__inner">
+        <a href="{{ item.link }}" class="news-item__imgbox">
+            <img src="/img/regular/content/news/{{ item.photo }}"
+                 alt=""
+                 class="news__item-img img">
+        </a>
+        <div class="news-item__content">
+            <div class="news-item__textbox text">
+                <h2 class="text__title title title_size_xl title_view_secondary">
+                    <a href="{{ item.link }}" class="title__text">{{ item.title }}</a>
+                </h2>
+                {% for text in item.text  %}<p class="text__item">{{ text }}</p>{% endfor %}
+            </div>
+            <div class="news-item__morebox">
+                <a href="{{ item.link }}" class="link news-item__more">Читати повністю</a>
+            </div>
+        </div>
+    </div>
+</div>

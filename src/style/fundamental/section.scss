@@ -45,6 +45,13 @@
     }
   }
 
+  &.section__inner_first {
+    padding-top: 30px;
+    @include bp994-block {
+      padding-top: 60px;
+    }
+  }
+
   &.section__inner_last {
     padding-bottom: 100px;
     @include bp994-block {

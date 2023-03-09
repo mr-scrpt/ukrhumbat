@@ -1,0 +1,9 @@
+<div class="news">
+    <div class="layout__row">
+        <div class="news__list layout__row-box">
+            {% for item in params.news_list %}
+                {% include 'component/news/news-list-item.njk' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

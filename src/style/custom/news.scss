@@ -41,7 +41,7 @@
   &__slider {
   }
 
-  &__item {
+  &__slide {
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -67,5 +67,11 @@
   }
 
   &__nav {
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
   }
 }

@@ -9,7 +9,11 @@
                         <div class="title__text">{{ params.titleText }}</div>
                     </div>
                 {% endif %}
-                {% include "component/" + params.component + "/" + params.component + ".njk" ignore missing %}
+                {% if params.folder %}
+                    {% include "component/" + params.folder  + "/" + params.component + ".njk" ignore missing %}
+                {% else %}
+                    {% include "component/" + params.component + "/" + params.component + ".njk" ignore missing %}
+                {% endif %}
             </div>
         </div>
     </section>
