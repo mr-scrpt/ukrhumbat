@@ -1,9 +1,9 @@
-<div class="news-item news__item">
+<div class="news-item news__item {{ "news-item_odd" if loop.index % 2 else "news-item_even" }}">
     <div class="news-item__inner">
         <a href="{{ item.link }}" class="news-item__imgbox">
             <img src="/img/regular/content/news/{{ item.photo }}"
                  alt=""
-                 class="news__item-img img">
+                 class="news-item__img img">
         </a>
         <div class="news-item__content">
             <div class="news-item__textbox text">
