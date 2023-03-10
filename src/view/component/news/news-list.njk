@@ -1,9 +1,30 @@
 <div class="news">
     <div class="layout__row">
-        <div class="news__list layout__row-box">
-            {% for item in params.news_list %}
-                {% include 'component/news/news-list-item.njk' %}
-            {% endfor %}
+        <div class="layout__row-box">
+            <div class="layout__serp">
+                <div class="news__list">
+                    {% for item in params.news_list %}
+                        {% include 'component/news/news-list-item.njk' %}
+                    {% endfor %}
+                </div>
+                <div class="news__pagination pagination">
+                    <div class="pagination__inner">
+                        <ul class="pagination__list">
+                            <a href="/" class="link pagination__link pagination__link_control">
+                                <div class="pagination__icon icon icon_arrow icon_arrow_r_180"></div>
+                            </a>
+                            <a href="/" class="link pagination__link">1</a>
+                            <span href="/" class="pagination__link pagination__link_active">2</span>
+                            <a href="/" class="link pagination__link">3</a>
+                            <a href="/" class="link pagination__link">4</a>
+                            <a href="/" class="link pagination__link">5</a>
+                            <a href="/" class="link pagination__link pagination__link_control">
+                                <span class="pagination__icon icon icon_arrow"></span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

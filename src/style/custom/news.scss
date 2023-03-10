@@ -69,9 +69,18 @@
   &__nav {
   }
 
+  &__serp {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
+
+    margin-bottom: 100px;
+
+    // width: 100%;
   }
 }
