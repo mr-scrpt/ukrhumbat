@@ -1,0 +1,53 @@
+<div class="news">
+    <div class="news__inner">
+        <div class="news__textbox text">
+            <p class="text__item">{{ params.news_item.text[0] }}</p>
+        </div>
+        <div class="news__sliderbox news__sliderbox_in slider">
+            <div class="swiper slider__row slider__row_main">
+                <div class="swiper-wrapper">
+                    {% for item in params.news_item.photo_list %}
+                        {% include 'component/news/news-inner-item-slide.njk' %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="slider__nav slider__nav_l">
+                <div class="news__nav-prev">
+                    <div class="arrow__item kit-pagination__arrow_prev">
+                        <div class="arrow__icon icon icon_arrow icon_arrow_r_180"></div>
+                    </div>
+                </div>
+                <div class="news__nav-next">
+                    <div class="arrow__item kit-pagination__arrow_next">
+                        <div class="arrow__icon icon icon_arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# <div class="news__infobox layout__row"> #}
+        {#     <div class="layout__row-box"> #}
+        {#         <div class="news__youtube relative"> #}
+        {#             <div class="relative__inner"> #}
+        {#                 <div class="relative__ration"></div> #}
+        {#                 <div class="relative__content frame"> #}
+        {#                     <div class="frame__inner"> #}
+        {#                         <iframe class="frame__item" #}
+        {#                                 src="https://www.youtube.com/embed/jeQOYnhS90U" #}
+        {#                                 title="YouTube video player" #}
+        {#                                 frameborder="0" #}
+        {#                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" #}
+        {#                                 allowfullscreen></iframe> #}
+        {#                     </div> #}
+        {#                 </div> #}
+        {#             </div> #}
+        {#         </div> #}
+        {#         <div class="news__text text"> #}
+        {#             <h2 class="text__title title title_size_xl title_view_secondary"> #}
+        {#                 <span href="{{ item.link }}" class="title__text">{{ params.news_item.title }}</span> #}
+        {#             </h2> #}
+        {#             {% for text in params.news_item.text  %}<p class="text__item">{{ text }}</p>{% endfor %} #}
+        {#         </div> #}
+        {#     </div> #}
+        {# </div> #}
+    </div>
+</div>

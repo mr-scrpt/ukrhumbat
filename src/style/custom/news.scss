@@ -26,6 +26,13 @@
     // @include size(12);
     width: 100%;
 
+    // &_in {
+    //   margin-bottom: 50px;
+    //   @include bp994-block {
+    //     margin-bottom: 95px;
+    //   }
+    // }
+
     @include bp768-block {
       width: auto;
       @include col;
@@ -38,7 +45,9 @@
     }
   }
 
-  &__slider {
+  &__infobox {
+    // @include col;
+    // @include size(12);
   }
 
   &__slide {

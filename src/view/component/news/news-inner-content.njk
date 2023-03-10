@@ -1,0 +1,27 @@
+<div class="news layout__row">
+    <div class="news__content layout__row-box">
+        <div class="news__infobox">
+            <div class="news__youtube relative">
+                <div class="relative__inner">
+                    <div class="relative__ration"></div>
+                    <div class="relative__content frame">
+                        <div class="frame__inner">
+                            <iframe class="frame__item"
+                                    src="https://www.youtube.com/embed/jeQOYnhS90U"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news__text text">
+                <h2 class="text__title title title_size_xl title_view_secondary">
+                    <span href="{{ item.link }}" class="title__text">{{ params.news_item.title }}</span>
+                </h2>
+                {% for text in params.news_item.text  %}<p class="text__item">{{ text }}</p>{% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

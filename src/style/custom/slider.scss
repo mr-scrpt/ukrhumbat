@@ -1,4 +1,6 @@
 .slider {
+  $parent: &;
+
   &__inner {
     display: flex;
 
@@ -16,9 +18,16 @@
   &__row {
     margin-bottom: 40px;
     padding: 15px 0;
+
+    #{$parent} &_main {
+      @include bp1100-block {
+        margin-bottom: 80px;
+      }
+    }
     @include bp994-block {
       margin-bottom: 80px;
     }
+
     @include bp1100-block {
       margin-bottom: 0;
     }
