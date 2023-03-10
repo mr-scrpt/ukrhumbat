@@ -14,6 +14,14 @@
     })
     }}
     {# Header contact seciton END #}
+    {# Breadcrumbs seciton #}
+    {{ layout_base_section({
+    component: 'breadcrumbs',
+    layoutClass: 'layout__wrap',
+    sectionClass: '',
+    sectionInnerClass:'section__inner_reset'
+    })
+    }}
     {# News seciton #}
     {{ layout_base_section({
     component: 'news-inner',
@@ -21,7 +29,7 @@
     titleText: news.news_list[0].title,
     layoutClass: 'layout__wrap deco__text-shadow',
     sectionClass: 'layout__section_free',
-    sectionInnerClass:'section__inner_only_top',
+    sectionInnerClass:'section__inner_only_top section__inner_first',
     sectionDecoText: 'Новости',
     news_item: news.news_list[0]
     })
