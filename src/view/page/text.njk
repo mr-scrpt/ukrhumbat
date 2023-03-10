@@ -1,0 +1,39 @@
+{% set inject = { layoutClass: "page page_theme layout deco"} %}
+{% extends "layout/layout.njk" %}
+{%- from "layout/layout-section-macros.njk" import layout_base_section -%}
+{%- from "layout/layout-footer-macros.njk" import layout_base_footer -%}
+{%- from "layout/layout-header-macros.njk" import layout_base_header -%}
+{% block main %}
+    {# Header contact seciton #}
+    {{ layout_base_header({
+    component: 'header',
+    layoutClass: 'layout__flat',
+    sectionClass: 'layout__section_free',
+    sectionInnerClass:'section__inner_reset',
+    menu_list: menu.menu_list
+    })
+    }}
+    {# Header contact seciton END #}
+    {# Text seciton #}
+    {{ layout_base_section({
+    component: 'text',
+    titleText: 'Угода користувача',
+    layoutClass: 'layout__wrap deco__text-shadow',
+    sectionClass: '',
+    sectionInnerClass:'section__inner_last',
+    sectionDecoText: 'Угода'
+    })
+    }}
+    {# Text seciton END #}
+    {# Footer contact seciton #}
+    {{ layout_base_footer({
+    component: 'footer',
+    layoutClass: 'layout__wrap',
+    sectionClass: 'layout__section_free',
+    sectionInnerClass:'deco__bg_gradient_v section__inner_footer',
+    menu_list: menu.menu_list,
+    contact_list: contact.contact_list
+    })
+    }}
+    {# Footer contact seciton END #}
+{% endblock main %}

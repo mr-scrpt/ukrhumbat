@@ -1,4 +1,6 @@
 .text {
+  position: relative;
+
   &__title {
     margin-bottom: 25px;
     @include bp994-block {
