@@ -1,0 +1,64 @@
+{% set inject = { layoutClass: "page page_theme layout deco"} %}
+{% extends "layout/layout.njk" %}
+{%- from "layout/layout-section-macros.njk" import layout_base_section -%}
+{%- from "layout/layout-footer-macros.njk" import layout_base_footer -%}
+{%- from "layout/layout-header-macros.njk" import layout_base_header -%}
+{% block main %}
+    {# Header contact seciton #}
+    {{ layout_base_header({
+    component: 'header',
+    layoutClass: 'layout__flat',
+    sectionClass: 'layout__section_free',
+    sectionInnerClass:'section__inner_reset',
+    menu_list: menu.menu_list
+    })
+    }}
+    {# Header contact seciton END #}
+    {# Breadcrumbs seciton #}
+    {{ layout_base_section({
+    component: 'breadcrumbs',
+    layoutClass: 'layout__wrap',
+    sectionClass: '',
+    sectionInnerClass:'section__inner_reset'
+    })
+    }}
+    {# Contact seciton #}
+    {{ layout_base_section({
+    component: 'contact',
+    titleText: 'Контакти',
+    layoutClass: 'layout__wrap',
+    sectionClass: '',
+    sectionInnerClass:'section__inner_first deco__bg_alt',
+    contact_list: contact.contact_list
+    })
+    }}
+    {# Contact seciton END #}
+    {# Form contact seciton #}
+    {{ layout_base_section({
+    component: 'form-contact',
+    layoutClass: 'layout__wrap',
+    sectionClass: 'layout__section_free'
+    })
+    }}
+    {# Form contact seciton END #}
+    {# Donat seciton #}
+    {{ layout_base_section({
+    component: 'donat',
+    layoutClass: 'layout__wrap',
+    sectionClass: '',
+    sectionInnerClass:'deco__bg_alt section__inner_last'
+    })
+    }}
+    {# Donat seciton END #}
+    {# Footer contact seciton #}
+    {{ layout_base_footer({
+    component: 'footer',
+    layoutClass: 'layout__wrap',
+    sectionClass: 'layout__section_free',
+    sectionInnerClass:'deco__bg_gradient_v section__inner_footer',
+    menu_list: menu.menu_list,
+    contact_list: contact.contact_list
+    })
+    }}
+    {# Footer contact seciton END #}
+{% endblock main %}
