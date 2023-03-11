@@ -1,0 +1,40 @@
+.not-found {
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__404 {
+    margin-bottom: 20px;
+
+    color: #000;
+
+    font-size: 130px;
+    font-weight: 500;
+    line-height: 130px;
+
+    @extend %text-gradient;
+    @include bp994-block {
+      font-size: 300px;
+      line-height: 300px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    text-transform: uppercase;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+
+    @include bp994-block {
+      margin-bottom: 50px;
+
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+}
