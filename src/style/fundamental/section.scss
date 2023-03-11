@@ -21,9 +21,15 @@
 
     margin-bottom: 35px;
 
+    text-align: center;
+
     text-transform: uppercase;
     @include bp994-block {
       margin-bottom: 80px;
+      padding: 0 80px;
+    }
+    @include bp1100-block {
+      padding: 0 100px;
     }
   }
 }
