@@ -1,0 +1,43 @@
+.payment {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @include bp994-block {
+    }
+    @include bp1100-block {
+    }
+  }
+
+  &__titlebox {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    max-width: 700px;
+
+    text-align: center;
+  }
+
+  &__textbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__text {
+    max-width: 720px;
+
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    @include bp994-block {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+}
