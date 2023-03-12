@@ -11,4 +11,5 @@ export const data = {
   support: JSON.parse(readFileSync(`${srcFolder}/data/support.json`, 'utf8')),
   team: JSON.parse(readFileSync(`${srcFolder}/data/team.json`, 'utf8')),
   contact: JSON.parse(readFileSync(`${srcFolder}/data/contact.json`, 'utf8')),
+  payment: JSON.parse(readFileSync(`${srcFolder}/data/payment.json`, 'utf8')),
 }

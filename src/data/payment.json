@@ -1,0 +1,61 @@
+{
+  "payment_list": [
+    {
+      "name": "privat",
+      "icon": "privat",
+      "data": [
+        { "title": "Карта (Гривня)", "value": "5168740000000000" },
+        { "title": "Карта (Долар)", "value": "5168740000000000" },
+        { "title": "Карта (Євро)", "value": "5168740000000000" },
+        { "title": "ЄДРПОУ", "value": "0000000000" },
+        { "title": "р/р UA000000", "value": "00000000000000000000000000" }
+      ]
+    },
+    {
+      "name": "monobank",
+      "icon": "mono",
+      "data": [{ "title": "Банка (Гривня)", "value": "Поповниты банку" }]
+    },
+    {
+      "name": "swift",
+      "icon": "swift",
+      "data": [
+        {
+          "title": "SWIFT (Прекази у гривнях)",
+          "value": "IBAN UA00 000000 00000 00000000000000"
+        }
+      ]
+    },
+    {
+      "name": "paypal",
+      "icon": "paypal",
+      "data": [
+        { "title": "Перейти до PayPal", "value": "namecompany@gmail.com" }
+      ]
+    },
+    {
+      "name": "crypto",
+      "icon": "crypto",
+      "data": [
+        {
+          "name": "eth",
+          "icon": "eth",
+          "title": "Гаманець (ETH)",
+          "value": "0x0000000000000000000000000000000000000000"
+        },
+        {
+          "name": "usdt",
+          "icon": "usdt",
+          "title": "Гаманець (USDT)",
+          "value": "TG00000000000000000000000000000000"
+        },
+        {
+          "name": "btc",
+          "icon": "btc",
+          "title": "Гаманець (Bitcoin)",
+          "value": "0x00000000000000000000000000000000"
+        }
+      ]
+    }
+  ]
+}

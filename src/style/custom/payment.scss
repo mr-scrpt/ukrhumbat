@@ -24,6 +24,11 @@
   &__textbox {
     display: flex;
     justify-content: center;
+
+    margin-bottom: 60px;
+    @include bp994-block {
+      margin-bottom: 120px;
+    }
   }
 
   &__text {
@@ -38,6 +43,55 @@
       font-size: 22px;
       font-weight: 500;
       line-height: 28px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 15px;
+
+    // grid-template-rows: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+
+    // grid-template-columns: repeat(2, 1fr);
+    @include bp640-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include bp994-block {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    &_privat {
+      @include bp994-block {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    }
+
+    &_crypto {
+      @include bp640-block {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+      @include bp994-block {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+
+      // grid-row: 1 2;
+    }
+
+    &_paypal {
+      @include bp994-block {
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
     }
   }
 }
