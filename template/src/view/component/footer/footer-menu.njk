@@ -1,0 +1,16 @@
+<div class="footer__cell footer-item">
+    <div class="footer-item__inner">
+        <div class="footer-item__titlebox">
+            <div class="footer-item__title">Про фонд</div>
+        </div>
+        <div class="footer-item__body menu-footer">
+            <nav class="menu-footer__inner">
+                {% for item in params.menu_list %}
+                    <span class="menu-footer__item">
+                        <a href="#" class="menu-footer__link link">{{ item.name }}</a>
+                    </span>
+                {% endfor %}
+            </nav>
+        </div>
+    </div>
+</div>

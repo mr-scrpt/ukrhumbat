@@ -1,0 +1,121 @@
+.showCtrl__controller {
+  display: none;
+}
+.showCtrl__controller_show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.showCtrl__box_init {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  -webkit-transform: translate(-99999px, 100%);
+  -ms-transform: translate(-99999px, 100%);
+  transform: translate(-99999px, 100%);
+}
+.showCtrl__box_close {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(-99999px, 100%);
+  -ms-transform: translate(-99999px, 100%);
+  transform: translate(-99999px, 100%);
+  -webkit-animation: slideMenuClose 0.7s forwards;
+  animation: slideMenuClose 0.7s forwards;
+}
+.showCtrl__box_open {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  -webkit-animation: slideMenuOpen 0.7s forwards;
+  animation: slideMenuOpen 0.7s forwards;
+}
+
+.showCtrl-relative {
+  position: relative;
+}
+
+@-webkit-keyframes slideMenuOpen {
+  0% {
+    -webkit-transform: translate(-100%, 100%);
+    transform: translate(-100%, 100%);
+    opacity: 0;
+    /*  visibility: hidden; */
+  }
+  50% {
+    -webkit-transform: translate(20%, 100%);
+    transform: translate(20%, 100%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    opacity: 1;
+    /* visibility: visible; */
+  }
+}
+
+@keyframes slideMenuOpen {
+  0% {
+    -webkit-transform: translate(-100%, 100%);
+    transform: translate(-100%, 100%);
+    opacity: 0;
+    /*  visibility: hidden; */
+  }
+  50% {
+    -webkit-transform: translate(20%, 100%);
+    transform: translate(20%, 100%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    opacity: 1;
+    /* visibility: visible; */
+  }
+}
+
+@-webkit-keyframes slideMenuClose {
+  0% {
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    opacity: 1;
+    /* visibility: visible; */
+  }
+  50% {
+    -webkit-transform: translate(20%, 100%);
+    transform: translate(20%, 100%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-100%, 100%);
+    transform: translate(-100%, 100%);
+    opacity: 0;
+    /* visibility: hidden; */
+  }
+}
+
+@keyframes slideMenuClose {
+  0% {
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    opacity: 1;
+    /* visibility: visible; */
+  }
+  50% {
+    -webkit-transform: translate(20%, 100%);
+    transform: translate(20%, 100%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-100%, 100%);
+    transform: translate(-100%, 100%);
+    opacity: 0;
+    /* visibility: hidden; */
+  }
+}
+

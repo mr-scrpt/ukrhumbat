@@ -1,0 +1,72 @@
+.showCtrl {
+  &__controller {
+    display: none;
+    &_show {
+      display: flex;
+    }
+  }
+  &__box {
+    &_init {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      transform: translate(-99999px, 100%);
+    }
+    &_close {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translate(-99999px, 100%);
+      animation: slideMenuClose 0.7s forwards;
+    }
+    &_open {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translate(0, 100%);
+      animation: slideMenuOpen 0.7s forwards;
+    }
+  }
+}
+.showCtrl-relative {
+  position: relative;
+}
+@keyframes slideMenuOpen {
+  0% {
+    transform: translate(-100%, 100%);
+
+    opacity: 0;
+    /*  visibility: hidden; */
+  }
+  50% {
+    transform: translate(20%, 100%);
+
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 100%);
+
+    opacity: 1;
+    /* visibility: visible; */
+  }
+}
+
+@keyframes slideMenuClose {
+  0% {
+    transform: translate(0, 100%);
+
+    opacity: 1;
+    /* visibility: visible; */
+  }
+  50% {
+    transform: translate(20%, 100%);
+
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100%, 100%);
+
+    opacity: 0;
+    /* visibility: hidden; */
+  }
+}
