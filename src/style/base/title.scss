@@ -3,6 +3,15 @@
 
   &__text {
   }
+
+  &__link {
+    color: $color_primary;
+
+    &:hover {
+      color: $color_secondary;
+    }
+    @include ts(color);
+  }
 }
 
 /* View */

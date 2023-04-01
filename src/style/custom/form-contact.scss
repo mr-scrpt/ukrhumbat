@@ -39,7 +39,32 @@
   }
 
   &__row {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+
+    &_half {
+      margin-bottom: 10px;
+    }
+
+    @include bp1440-block {
+      margin-bottom: 30px;
+
+      &_half {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__rule-text {
+    margin-bottom: 15px;
+
+    text-align: center;
+
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  &__rule-link {
+    color: $color_primary;
   }
 
   &__buttonbox {
@@ -48,7 +73,7 @@
   }
 
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     text-align: center;
     text-transform: uppercase;
@@ -59,7 +84,7 @@
     @extend %text-gradient;
 
     @include bp994-block {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
 
       font-size: 38px;
       font-weight: 700;
@@ -72,7 +97,7 @@
 
     text-align: center;
     @include bp994-block {
-      margin-bottom: 50px;
+      // margin-bottom: 50px;
 
       font-size: 24px;
       font-weight: 700;

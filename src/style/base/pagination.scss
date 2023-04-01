@@ -11,27 +11,33 @@
 
   &__link {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     width: 32px;
     height: 32px;
+
+    text-decoration: none;
+
+    color: $color_dark;
+
     font-size: 18px;
     font-weight: 400;
 
-    color: $color_dark;
-    @include ts(color, background-color);
     &_active {
-      background-color: $color_primary;
       color: $color_light;
+      background-color: $color_primary;
     }
 
     &:hover {
-      background-color: $color_primary;
       color: #fff;
+      background-color: $color_primary;
+
       & .pagination__icon {
         background-color: $color_light;
       }
     }
+    @include ts(color, background-color);
   }
 
   &__icon {

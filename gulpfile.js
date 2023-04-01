@@ -67,6 +67,8 @@ const maintask = gulp.series(
   font,
   gulp.parallel(copy, nunjak, scss, js, image, imageToTiny, svgSprive)
 )
+// Для легкого билда скриптов и стилей
+const light = gulp.series(font, gulp.parallel(copy, nunjak, scss, js))
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(
@@ -75,6 +77,8 @@ const dev = gulp.series(
   gulp.parallel(watcher, server)
 )
 const build = gulp.series(removeFolderBuild, maintask)
+const buildLight = gulp.series(removeFolderBuild, light)
+const buildJS = gulp.series(removeFolderBuild, js)
 const deployZIP = gulp.series(removeFolderBuild, maintask, zip)
 const deployFTP = gulp.series(removeFolderBuild, maintask, ftp)
 
@@ -82,6 +86,8 @@ const deployFTP = gulp.series(removeFolderBuild, maintask, ftp)
 export { svgSprive }
 export { dev }
 export { build }
+export { buildLight }
+export { buildJS }
 export { deployZIP }
 export { deployFTP }
 

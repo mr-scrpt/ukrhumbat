@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp build --build",
+    "light": "gulp buildLight --build",
+    "js": "gulp buildJS --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
     "svgSprive": "gulp svgSprive"

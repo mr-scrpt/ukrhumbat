@@ -1,0 +1,31 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    width: 100%;
+  }
+}
+
+.list.list_view_primary {
+  list-style-type: disc;
+}
+
+.list.list_size_l {
+  padding-left: 20px;
+
+  list-style-type: disc;
+
+  .list__item {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 18px;
+    @include bp994-block {
+      margin-bottom: 12px;
+
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}

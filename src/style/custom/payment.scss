@@ -63,14 +63,14 @@
   }
 
   &__item {
-    &_privat {
+    &_first {
       @include bp994-block {
         grid-row-start: 1;
         grid-row-end: 3;
       }
     }
 
-    &_crypto {
+    &_fifth {
       @include bp640-block {
         grid-column-start: 1;
         grid-column-end: 3;
@@ -87,11 +87,42 @@
       // grid-row: 1 2;
     }
 
-    &_paypal {
+    &_fourth {
       @include bp994-block {
         grid-row-start: 3;
         grid-row-end: 5;
       }
     }
+
+    // &_privat {
+    //   @include bp994-block {
+    //     grid-row-start: 1;
+    //     grid-row-end: 3;
+    //   }
+    // }
+
+    // &_crypto {
+    //   @include bp640-block {
+    //     grid-column-start: 1;
+    //     grid-column-end: 3;
+    //     grid-row-start: 2;
+    //     grid-row-end: 4;
+    //   }
+    //   @include bp994-block {
+    //     grid-column-start: 2;
+    //     grid-column-end: 4;
+    //     grid-row-start: 2;
+    //     grid-row-end: 4;
+    //   }
+
+    //   // grid-row: 1 2;
+    // }
+
+    // &_paypal {
+    //   @include bp994-block {
+    //     grid-row-start: 3;
+    //     grid-row-end: 5;
+    //   }
+    // }
   }
 }
