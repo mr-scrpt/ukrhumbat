@@ -1,7 +1,6 @@
 {
   "env": {
     "browser": true,
-    "app": true,
     "es2021": true
   },
   "root": true,

@@ -63,6 +63,7 @@
   }
 
   &__item {
+    position: relative;
     &_first {
       @include bp994-block {
         grid-row-start: 1;

@@ -21,6 +21,11 @@
   &__row-box {
     width: 100%;
 
+    &_full {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
     @include col;
     @include size-bp768(12);
     @include size-bp994(10);

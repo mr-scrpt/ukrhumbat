@@ -69,10 +69,13 @@
     // object-fit: fill;
 
     width: 100%;
+    @extend %border-radius;
   }
 
   &__item-title {
     text-transform: uppercase;
+
+    color: $color_dark;
 
     font-size: 20px;
     font-weight: 500;

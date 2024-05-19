@@ -6,6 +6,7 @@
 
   &__item {
     @include col;
-    @include size(10);
+    @include size(12);
+    @include size-bp480(10);
   }
 }

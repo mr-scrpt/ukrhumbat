@@ -1,6 +1,7 @@
 .about {
   &__inner {
     justify-content: center;
+
     @include row-flex;
   }
 

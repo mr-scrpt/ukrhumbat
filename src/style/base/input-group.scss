@@ -24,6 +24,16 @@
   &__box {
     flex-grow: 1;
   }
+
+  &__error {
+    display: none;
+
+    color: $color_attention;
+
+    &_is {
+      display: block;
+    }
+  }
 }
 
 .input-group.input-group_type_split {

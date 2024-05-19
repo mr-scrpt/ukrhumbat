@@ -9,51 +9,59 @@
                  class="img form-contact__img">
         </div>
         <div class="form-contact__formbox box">
-            <div class="box__inner form-contact__content">
-                <div class="form-contact__title">Зв'яжіться з нами</div>
-                <div class="form-contact__titlesub">Форма зворотнього зв'язку</div>
-                <div class="form-contact__row">
-                    {{input_group_macro({
-                    split: 'nosplit',
-                    title: 'Імʼя',
-                    theme: 'input_view_primary',
-                    size: 'input_size_l',
-                    other: 'input_width_available'
-                    errorText: 'Поле не заповнено'
-                    })
-                    }}
-                    })
-                    }}
+            <div class="box__inner form-contact__content action">
+                <div class="form-contact__action action__step_start">
+                    <div class="form-contact__title">Зв'яжіться з нами</div>
+                    <div class="form-contact__titlesub">Форма зворотнього зв'язку</div>
+                    <div class="form-contact__row">
+                        {{input_group_macro({
+                        split: 'nosplit',
+                        title: 'Імʼя',
+                        theme: 'input_view_primary',
+                        size: 'input_size_l',
+                        other: 'input_width_available',
+                        errorText: 'Поле не заповнено'
+                        })
+                        }}
+                    </div>
+                    <div class="form-contact__row">
+                        {{input_group_macro({
+                        split: 'nosplit',
+                        title: 'Email',
+                        theme: 'input_view_primary',
+                        size: 'input_size_l',
+                        other: 'input_width_available',
+                        errorText: 'Поле не заповнено'
+                        })
+                        }}
+                    </div>
+                    <div class="form-contact__row">
+                        {{textarea_group_macro({
+                        split: 'nosplit',
+                        title: 'Email',
+                        theme: 'textarea_view_primary',
+                        size: 'textarea_size_l',
+                        other: 'textarea_width_available',
+                        errorText: 'Поле не заповнено'
+                        })
+                        }}
+                    </div>
+                    <div class="form-contact__rule-text">
+                        Відправляючи форму, я приймаю умови <a href="{8 | url}" class="link form-contact__rule-link">угоди користувача</a>
+                    </div>
+                    <div class="form-contact__row form-contact__buttonbox">
+                        <button class="button button_view_primary button_size_l">
+                            <div class="button__text">Надіслати</div>
+                        </button>
+                    </div>
                 </div>
-                <div class="form-contact__row">
-                    {{input_group_macro({
-                    split: 'nosplit',
-                    title: 'Email',
-                    theme: 'input_view_primary',
-                    size: 'input_size_l',
-                    other: 'input_width_available'
-                    errorText: 'Поле не заповнено'
-                    })
-                    }}
-                </div>
-                <div class="form-contact__row">
-                    {{textarea_group_macro({
-                    split: 'nosplit',
-                    title: 'Email',
-                    theme: 'textarea_view_primary',
-                    size: 'textarea_size_l',
-                    other: 'textarea_width_available'
-                    errorText: 'Поле не заповнено'
-                    })
-                    }}
-                </div>
-                <div class="form-contact__rule-text">
-                    Відправляючи форму, я приймаю умови <a href="{8 | url}" class="link form-contact__rule-link">угоди користувача</a>
-                </div>
-                <div class="form-contact__row form-contact__buttonbox">
-                    <button class="button button_view_primary button_size_l">
-                        <div class="button__text">Надіслати</div>
-                    </button>
+                <div class="form-contact__thanksbox action__step_end thanks">
+                    <div class="thanks__inner">
+                        <div class="thanks__icon icon icon_success"></div>
+                        <div class="thanks__text">
+                            <span class="deco__text_success">Вітаємо!</span> Дані успішно відправлені!
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

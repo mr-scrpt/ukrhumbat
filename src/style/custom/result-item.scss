@@ -10,22 +10,26 @@
 
   &__titlebox {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
-    padding: 40px 30px;
+    height: 90px;
+
+    padding: 30px 25px;
 
     text-align: center;
 
     border-bottom: 2px solid $color_light;
-    @include bp768-block {
-      padding-right: 15px;
 
-      padding-left: 15px;
-    }
     @include bp1100-block {
-      padding-right: 50px;
-
-      padding-left: 50px;
+      height: 100px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    @include bp1440-block {
+      height: 110px;
+      // padding-right: 35px;
+      // padding-left: 35px;
     }
   }
 
@@ -38,29 +42,40 @@
     font-weight: 500;
     line-height: 20px;
     @include bp1100-block {
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+    @include bp1440-block {
+      font-size: 22px;
+      line-height: 22px;
     }
   }
 
   &__textbox {
-    padding: 36px 30px;
-    @include bp768-block {
-      padding-right: 15px;
+    padding: 30px 25px;
 
-      padding-left: 15px;
-    }
+    list-style-type: '- ';
+
     @include bp1100-block {
-      padding-right: 50px;
+      padding-right: 30px;
 
-      padding-left: 50px;
+      padding-left: 30px;
+    }
+
+    @include bp1100-block {
+      padding-right: 30px;
+
+      padding-left: 30px;
     }
   }
 
   &__text {
+    margin-bottom: 5px;
+
     color: $color_light;
 
-    font-size: 13px;
+    font-size: 14px;
+
     font-weight: 500;
     line-height: 18px;
   }

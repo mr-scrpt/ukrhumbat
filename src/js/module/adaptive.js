@@ -7,6 +7,9 @@ $(() => {
   const brakepoint = 994
   let isOpen = false
 
+
+
+
   init()
   $controller.on('click', () => {
     if ($parent.hasClass('adaptive_open')) {

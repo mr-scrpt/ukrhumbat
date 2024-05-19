@@ -8,6 +8,7 @@
 
     &::before {
       position: absolute;
+      z-index: -1;
       top: -80px;
       right: -125px;
       bottom: -80px;
@@ -53,8 +54,9 @@
 
     width: 100%;
 
-    max-width: 340px;
+    max-width: 360px;
 
+    @extend %border-radius;
     // max-width: initial;
   }
 
@@ -161,11 +163,15 @@
   z-index: 2;
 
   .news-item__inner::before {
+    z-index: 0;
+
     opacity: 1;
   }
 
   .news-item__textbox {
-    max-height: 340px;
+    @include bp768-block {
+      max-height: 340px;
+    }
   }
 
   .news-item__textbox::before {

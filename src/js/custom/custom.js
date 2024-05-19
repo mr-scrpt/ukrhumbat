@@ -59,8 +59,12 @@ var AjaxForm = {
             if (typeof afValidated != 'undefined' && afValidated == false) {
               return false
             }
-            form.find('.error').html('')
-            form.find('.error').removeClass('error')
+            // form.find('.error').html('')
+            // form.find('.error').removeClass('error')
+            form
+              .find('.input-group__error_is')
+              .removeClass('input-group__error_is')
+            form.find('.input_state_error').removeClass('input_state_error')
             form.find('input,textarea,select,button').attr('disabled', true)
             return true
           },
@@ -96,11 +100,18 @@ var AjaxForm = {
                       focused = true
                     }
                     value = response.data[key]
-                    const inputError = form.find('[name="' + key + '"]')
-                    const inputElementError = inputError.closest('.input')
-                    const inputErrorMessageBlock =
-                      inputElementError.closest('.input__msg-error')
-                    inputElementError.addClass('input_state_error')
+                    const $inputError = form.find('[name="' + key + '"]')
+                    const $inputElementError = $inputError.closest('.input')
+                    const $inputGroupElementError =
+                      $inputElementError.closest('.input-group')
+
+                    console.log('input group ', $inputGroupElementError)
+                    const $inputErrorMessageBlock =
+                      $inputGroupElementError.find('.input-group__error')
+
+                    $inputElementError.addClass('input_state_error')
+
+                    $inputErrorMessageBlock.addClass('input-group__error_is')
                     // console.log('element', inputElementError)
                     // console.log('input', inputError)
                     // form.find('.error_' + key).html(value).addClass('error');
@@ -171,3 +182,15 @@ AjaxForm.Message = {
     $.jGrowl('close')
   },
 }
+$(document).on('af_complete', function (event, response) {
+  if (response.success) {
+    console.log('success', response)
+    const $formBox = $('.action__step_start')
+    const $thanksBox = $('.action__step_end')
+
+    $formBox.addClass('action__step_start_inactive')
+    $formBox.removeClass('action__step_start_active')
+    $thanksBox.addClass('action__step_end_active')
+    $thanksBox.removeClass('action__step_end_inactive')
+  }
+})

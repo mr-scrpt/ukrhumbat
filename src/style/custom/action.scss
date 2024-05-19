@@ -1,0 +1,26 @@
+.action {
+  &__step_start {
+    &_active {
+      z-index: 1;
+
+      opacity: 1;
+    }
+
+    &_inactive {
+      opacity: 0;
+    }
+  }
+
+  &__step_end {
+    &_active {
+      opacity: 1;
+    }
+
+    &_inactive {
+      z-index: -1;
+
+      opacity: 0;
+    }
+    @include ts(opacity);
+  }
+}

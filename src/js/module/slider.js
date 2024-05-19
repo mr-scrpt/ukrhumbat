@@ -7,6 +7,15 @@ import 'swiper/css/pagination'
 Swiper.use([Navigation, Pagination, Autoplay, Thumbs])
 // News slider
 $(() => {
+  const imgs = $('.news__item-img')
+
+  if (imgs.length <= 1) {
+    const $nav = $('.slider__nav')
+    $nav.remove()
+
+    return
+  }
+
   const [navNext] = $('.news__nav-next')
   const [navPrev] = $('.news__nav-prev')
   sliderGen('.news .swiper', optionsNews({ navNext, navPrev }))
